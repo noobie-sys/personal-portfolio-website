@@ -1,0 +1,65 @@
+.main-header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: var(--family);
+}
+.about {
+    width: 100%;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.about-desc {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 13px;
+}
+.about-desc > h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color : greenyellow;
+}
+.about-desc > p {
+    font-size: 3rem;
+    line-height: 53px;
+}
+.hire-button {
+    margin-top: 40px;
+    width: 100px;  
+}
+
+
+.sticker {
+    padding: 10px;
+    transform: rotate(145deg);
+    position: relative;
+    margin-right: 40px;
+}
+
+.code-image {
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+.about_long_desc {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.desc_about_me {
+    width: 60%;
+}
+.coding {
+    transform: rotate(338deg);
+}
+
+
+

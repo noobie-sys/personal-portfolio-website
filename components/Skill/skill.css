@@ -1,0 +1,44 @@
+.skill-div {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  font-family: "Comfortaa", sans-serif;
+  flex-direction: column;
+}
+.skill-desc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 90px 0px;
+}
+
+.skill-desc > h1 {
+  font-size: 2rem;
+}
+.skill-set {
+  position: relative;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-title {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid gray;
+  padding-right: 50px;
+}
+.skill-name {
+  font-size: 20px;
+}
+.coming-soon {
+  margin: 50px auto;
+  font-size: 1.5rem;
+}
+.icon {
+    color : greenyellow;
+}
