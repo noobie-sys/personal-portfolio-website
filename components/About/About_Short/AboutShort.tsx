@@ -12,7 +12,7 @@ const AboutShort = () => {
     <div className="about">
         <div className="about-desc">
           <h1>About Me</h1>
-          <p>I can deliver results that exceed your expectaions.</p>
+          <p>I can deliver results that exceed your <strong className=''>expectaions</strong>.</p>
           <div className="hire-button">
             <Button
               color="default"

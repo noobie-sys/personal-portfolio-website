@@ -13,7 +13,7 @@ const AboutLong = (props: Props) => {
             <Image src={code} alt='Code Image' width={200} height={200} className='code-image' />
         </div>
        <div className='desc_about_me'>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ea dicta dolorum accusantium vel atque quos provident, eveniet, ducimus consequuntur rem voluptas saepe, dignissimos magni tempora perferendis. Ea possimus quae totam voluptas! Laboriosam eveniet voluptatem tempore animi sit! Fuga, eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sed praesentium officiis animi maiores ullam, sequi dolor doloribus veniam tempore natus pariatur quos et quidem reiciendis laborum architecto voluptas quis. </h1>
+        <h1>Hello, I'm Aman Gupta, and I have a deep passion for web development, software engineering, and all things tech-related. I constantly strive to stay abreast of the latest technologies, always eager for new learning experiences. Beyond coding, I enjoy <strong >traveling</strong>, indulging in <strong>Coffee</strong>, and sometimes <strong>Dancing and Singing</strong>. I appreciate your time in reading this, and I'd like to express my gratitude. If you're looking for a <strong>dedicated professional</strong>, consider hiring me. If you're not convinced yet, feel free to <strong>scroll down</strong> for more about what I bring to the table. </h1>
        </div>
 
     </div>
