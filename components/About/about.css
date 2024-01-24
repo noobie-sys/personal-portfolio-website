@@ -60,6 +60,9 @@
 .desc_about_me {
     width: 60%;
 }
+.desc_about_me > h1 {
+    margin-bottom: 20px;
+}
 .desc_about_me > h1 > strong {
     color : greenyellow;
 }
