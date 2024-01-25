@@ -8,7 +8,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="main-div w-full h-[80vh]">
+    <div className="main-div w-full h-[80vh] ">
       <div className="name dark:text-slate-300">
         <h2 className="">Aman</h2>
         <h2>Gupta</h2>

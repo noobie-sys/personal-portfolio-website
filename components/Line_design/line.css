@@ -1,0 +1,55 @@
+.line-header {
+    /* background-color: rgb(18, 18, 18); */
+    width: 100%;
+    height: 100%;
+    padding: 60px 0;
+    white-space: nowrap ;
+}
+/* .logos {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.skill-logos {
+    display: flex;
+    gap: 20px;
+    /* background-color: rgb(27, 28, 28); */
+    /* justify-content: space-between; */
+    animation: slide 5s infinite linear ;
+}
+.skill-logos > img {
+    filter: invert(1);
+    height: 50px;
+}
+
+
+.logos {
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    gap: 100px;
+}
+
+
+.logo-slide {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* animation: 10s slide infinite linear; */
+    /* padding: 50px 0; */
+    background-color: rgb(39, 39, 39);
+}
+
+.logo-slide img {
+    height: 50px;
+    filter: invert(1);
+}
+
+@keyframes slide {
+    from {
+        transform:  translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
