@@ -7,6 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import SmoothScrolling from "./SmoothScrolling";
+import StickyCursor from "@/components/Cursor/StickyCursor";
 
 export const metadata: Metadata = {
   title: {
@@ -38,9 +39,12 @@ export default function RootLayout({
       >
         <SmoothScrolling>
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-            <div className="relative flex flex-col h-full">
+            <div className="relative flex flex-col h-fit">
               <Navbar />
-              <main className="p-40  pt-16  flex-grow ">{children}</main>
+              <main className="p-40  pt-16  flex-grow ">
+                <StickyCursor />
+                {children}
+              </main>
             </div>
           </Providers>
         </SmoothScrolling>
