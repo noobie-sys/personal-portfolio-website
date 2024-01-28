@@ -15,8 +15,8 @@
   
   
   .marquee:hover {
-    -webkit-text-stroke: 1.5px #fff;
-      text-stroke: 1.5px #fff;
+    -webkit-text-stroke: 1.5px yellowgreen;
+      text-stroke: 1.5px #9d9a9a;
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
       color: transparent;
@@ -38,7 +38,7 @@
   }
   
   .marquee__group span {
-    color: white;
+    color: rgb(204, 202, 202);
     font-size: 3vw;
     font-weight: 600;
     white-space: nowrap;
