@@ -12,35 +12,46 @@ type Props = {};
 
 const Line = (props: Props) => {
   return (
-    <div className="logos">
-      <div className="logo-slide">
-        <Image src={image1} alt="image" />
-        <Image src={image2} alt="image" />
-        <Image src={image3} alt="image" />
-        <Image src={image4} alt="image" />
-        <Image src={image5} alt="image" />
+    // <div className="logos">
+    //   <div className="logo-slide">
+
+    //     {/* <Image src={image1} alt="image" /> */}
+    //     <h1 className="text-[1.5rem] uppercase">TypeScript</h1>
+    //     <h1 className="text-[1.5rem] uppercase">JavaScript</h1>
+
+    //     <h1 className="text-[1.5rem] uppercase">CSS</h1>
+
+    //     <h1 className="text-[1.5rem] uppercase">Firebase</h1>
+
+    //     <h1 className="text-[1.5rem] uppercase">Next.js</h1>
+
+    //   </div>
+    //   <div className="logo-slide rota">
+
+    //     {/* <Image src={image1} alt="image" /> */}
+    //     <h1 className="text-[1.5rem] uppercase">TypeScript</h1>
+    //     <h1 className="text-[1.5rem] uppercase">JavaScript</h1>
+
+    //     <h1 className="text-[1.5rem] uppercase">CSS</h1>
+
+    //     <h1 className="text-[1.5rem] uppercase">Firebase</h1>
+
+    //     <h1 className="text-[1.5rem] uppercase">Next.js</h1>
+
+    //   </div>
+    // </div>
+
+    <div className="marquee">
+      <div className="marquee__group">
+        <span>Frontend Development ➺</span>
+        <span>Backend Development ➺</span>
+        <span>Full Stack Development ➺</span>
       </div>
-      <div className="logo-slide">
-        <Image src={image1} alt="image" />
-        <Image src={image2} alt="image" />
-        <Image src={image3} alt="image" />
-        <Image src={image4} alt="image" />
-        <Image src={image5} alt="image" />
+      <div className="marquee__group" aria-hidden="true">
+        <span>Frontend Development ➺</span>
+        <span>Backend Development ➺</span>
+        <span>Full Stack Development ➺</span>
       </div>
-      {/* <div className='skill-logos'>
-            <Image src={image1} alt='image' />
-            <Image src={image2} alt='image' />
-            <Image src={image3} alt='image' />
-            <Image src={image4} alt='image' />
-            <Image src={image5} alt='image' />
-        </div>
-        <div className='skill-logos'>
-            <Image src={image1} alt='image' />
-            <Image src={image2} alt='image' />
-            <Image src={image3} alt='image' />
-            <Image src={image4} alt='image' />
-            <Image src={image5} alt='image' />
-        </div> */}
     </div>
   );
 };
