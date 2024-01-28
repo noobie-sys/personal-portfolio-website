@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
       </div>
       <div className="mouse">
         <div className="mouse-icon">
-        <BsMouse size={24} />
+        <BsMouse size={24} className="icon-mouse" />
         </div>
         <h3 className="scroll">Scroll</h3>
         

@@ -60,3 +60,19 @@
     border-radius: 40px;
 }
 
+.icon-mouse {
+    animation: upsideDown 5s linear infinite;
+}
+
+
+@keyframes upsideDown {
+    0% {
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+    0%{
+        transform: translateY(0);
+    }
+}
