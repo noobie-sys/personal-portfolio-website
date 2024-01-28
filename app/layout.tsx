@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+import SmoothScrolling from "./SmoothScrolling";
 
 export const metadata: Metadata = {
   title: {
@@ -35,12 +36,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <SmoothScrolling>
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
             <div className="relative flex flex-col h-full">
               <Navbar />
               <main className="p-40  pt-16  flex-grow ">{children}</main>
             </div>
           </Providers>
+        </SmoothScrolling>
       </body>
     </html>
   );

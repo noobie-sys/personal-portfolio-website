@@ -31,7 +31,7 @@ export default function Home() {
     <section className=" w-full h-full flex flex-col justify-center">
       <Hero />
 	  <Skill />
-	  <Divider />ˀ
+	  <Divider />
 	  <About />
     <Line />
     </section>
