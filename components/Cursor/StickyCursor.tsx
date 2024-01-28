@@ -10,7 +10,7 @@ import "./stickyCursor.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const StickyCursor = () => {
-  const cursorSize =  20;
+  const cursorSize =  40;
 
   const mouse = {
     x: useMotionValue(0),

@@ -1,0 +1,61 @@
+.work-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.upper_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    padding: 0 80px;
+}
+.heading {
+    width: 50%;
+    font-family: var(--family);
+}
+.upper_div .heading h1 {
+    font-size: 1rem;
+    color: greenyellow;
+}
+.upper_div .heading h3 {
+    font-size: 3rem;
+    font-family: var(--syne);
+}
+.heading h3 > span {
+    color: greenyellow;
+}
+.cta {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+.cta h1 {
+    font-size: 2rem;
+    font-family: var(--family);
+}
+
+.middle_div {
+    margin-bottom: 20px;
+}
+
+.cta .button {
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    padding: 0 40px;
+    margin-top: 10px;
+}
+.cta .button button {
+    font-family: var(--syne);
+    transition: color 0.4 linear ease-in;
+}
+.cta .button button:hover {
+    color : yellowgreen
+}

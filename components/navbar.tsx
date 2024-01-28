@@ -6,8 +6,6 @@ import {
 import { Link } from "@nextui-org/link";
 
 import { siteConfig } from "@/config/site";
-
-import { ThemeSwitch } from "@/components/theme-switch";
 import { TwitterIcon, GithubIcon, DiscordIcon } from "@/components/icons";
 import { FaMandalorian } from "react-icons/fa";
 
@@ -39,7 +37,6 @@ export const Navbar = () => {
             <Link isExternal href={siteConfig.links.github} aria-label="Github">
               <GithubIcon className="text-default-500" />
             </Link>
-            <ThemeSwitch />
           </NavbarItem>
         </div>
       </div>

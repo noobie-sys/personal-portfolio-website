@@ -4,7 +4,6 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import SmoothScrolling from "./SmoothScrolling";
 import StickyCursor from "@/components/Cursor/StickyCursor";
@@ -40,6 +39,7 @@ export default function RootLayout({
         <SmoothScrolling>
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
             <div className="relative flex flex-col h-fit">
+      <StickyCursor  />
               <Navbar />
               <main className="p-40  pt-16  flex-grow ">
                 
