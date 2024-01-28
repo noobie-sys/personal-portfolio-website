@@ -42,7 +42,7 @@ export default function RootLayout({
             <div className="relative flex flex-col h-fit">
               <Navbar />
               <main className="p-40  pt-16  flex-grow ">
-                <StickyCursor />
+                
                 {children}
               </main>
             </div>

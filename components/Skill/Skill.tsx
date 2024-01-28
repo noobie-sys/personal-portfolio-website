@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject, forwardRef } from "react";
 import "@/components/Skill/skill.css";
 import {
   TbBrandTypescript,
@@ -8,12 +8,10 @@ import {
   TbBrandPython,
 } from "react-icons/tb";
 import { SiCsswizardry } from "react-icons/si";
-import { RiReactjsFill, RiReactjsLine } from "react-icons/ri";
+import { RiReactjsFill } from "react-icons/ri";
 import { BiLogoTailwindCss } from "react-icons/bi";
-import { Divider } from "@nextui-org/divider";
-type Props = {};
 
-const Skill = (props: Props) => {
+const Skill =  () => {
   return (
     <div className="skill-div">
       <div className="skill-desc">
@@ -21,9 +19,9 @@ const Skill = (props: Props) => {
         <h3>Skill that you need for your company.</h3>
       </div>
       <div className="skill-set">
-        <div className="skill-title">
-          <TbBrandTypescript size={52} className="icon" />
-          <h1 className="skill-name">Typescript</h1>
+        <div className="skill-title" >
+          <TbBrandTypescript size={52} className="icon"  />
+          <h1 className="skill-name" >Typescript</h1>
         </div>
         <div className="skill-title">
           <TbBrandJavascript size={52}   className="icon" />
