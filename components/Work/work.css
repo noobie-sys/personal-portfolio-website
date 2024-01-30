@@ -1,5 +1,5 @@
 .work-container {
-    height: 80vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,15 +59,6 @@
 }
 
 
-.middle_div {
-    margin-bottom: 20px;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: c;
-
-}
-
 .lower_div {
     height: 10vh;
     background-color: yellow;
@@ -81,7 +72,7 @@
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
-
+    
 }
 
 .skill-logo h2 {
@@ -98,4 +89,124 @@
     font-size: 20px;
     text-align: center;
     
+}
+
+.middle_div {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 3px;
+    /* border: 1px solid #adff2f; */
+    display: flex;
+}
+
+.middle_div > .widht_div {
+    width: 50%;
+    /* border: 1px solid #f1f1f1; */
+}
+
+.middle_div .left_div {
+     display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px;
+    height: 100%;
+}
+.middle_div .left_div > div {
+    height: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+
+   
+}
+
+.middle_div .left_div .upper_element {
+    width: 100%;
+    height: 300px;
+}
+
+.middle_div   img {
+    width: 100%;
+    height:100%;
+    background-size: cover;
+    background-position: top;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.middle_div   img:hover {
+    transform: scale(1.2);
+
+    transition: all 0.5 linear ease-in-out;
+}
+.center_div {
+    overflow: hidden;
+    border-radius: 8px;
+}
+/* .center_div img {
+    width: 100%;
+    height:100%;
+    background-size: cover;
+    background-position: top;
+    transition: all 0.3s ease-in-out;
+}
+
+.center_div  img:hover {
+    transform: scale(1.2);
+
+    transition: all 0.5 linear ease-in-out;
+} */
+
+
+.right_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.right_div > div {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.right_inner_upper_div_element {
+    border-radius: 8px;
+}
+
+.right_inner_lower_div_element {
+    border-top: 5px solid rgb(40, 41, 40);
+    border-left: 5px solid rgb(40, 41, 40);
+    border-top-left-radius: 40px;
+    margin-top: 4px;
+    padding: 30px 10px;
+    font-family: var(--cliamte);
+    display: flex;
+    font-size: 4rem;
+    flex-direction: column;
+    position: relative;
+    
+
+}
+
+.redirect_link {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transform: translate(-40% , 25%);
+    border: 1px dashed gray;
+    border-radius: 50%;
+    align-items: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s  ease-in-out;
+}
+
+.redirect_link .arrow_icon:hover {
+    transform: scale(1.1);
 }
