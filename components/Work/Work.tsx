@@ -60,7 +60,9 @@ const Work = () => {
             <h1>More</h1>
             <h1>Projects</h1>
             <div className="redirect_link">
+
               <CiLocationArrow1 size={100} className="arrow_icon" />
+              
             </div>
           </div>
         </div>
