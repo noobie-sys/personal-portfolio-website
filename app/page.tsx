@@ -8,6 +8,7 @@ import Line from "@/components/Line_design/Line";
 import {  useRef } from "react";
 import StickyCursor from "@/components/Cursor/StickyCursor";
 import Work from "@/components/Work/Work";
+import Cards from "@/ui/card";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
       <Hero />
       <Skill />
       <About />
-      <Line />
       <Work />
+     
     </section>
   );
 }

@@ -4,6 +4,7 @@
   display: flex;
   font-family: "Comfortaa", sans-serif;
   flex-direction: column;
+  align-items: center;
 }
 .skill-desc {
   display: flex;
@@ -19,6 +20,7 @@
   position: relative;
   display: flex;
   gap: 100px;
+  max-width: 70%;
   justify-content: center;
   flex-wrap: wrap;
 }

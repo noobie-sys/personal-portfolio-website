@@ -3,6 +3,7 @@ import './work.css'
 import { Button } from '@nextui-org/button'
 import Line from '../Line_design/Line'
 import { FaArrowRight } from 'react-icons/fa'
+import Cards from '@/ui/card'
 const Work = () => {
   return (
     <div className='work-container'>
@@ -24,9 +25,16 @@ const Work = () => {
                 
             </div>
         </div>
-        <div className='middle_div'>Hello Dev</div>
+        <div className='middle_div'>
+          <Cards />
+        </div>
         <div className='lower_div'>
-           
+           <div className="skill-logo">
+              <h2>Web Development <span>♠</span></h2>
+              <h2>Web Development <span>♠</span></h2>
+              <h2>Web Development <span>♠</span></h2>
+              
+           </div>
         </div>
     </div>
   )

@@ -9,4 +9,7 @@
     --syne : "Syne", sans-serif ;
 }
 
+html::-webkit-scrollbar {
+    display: none;
 
+}

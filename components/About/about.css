@@ -55,6 +55,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .desc_about_me {

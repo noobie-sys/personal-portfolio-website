@@ -10,6 +10,7 @@
   padding-bottom: 2rem;
   transform: skewY(-3deg);
   transform: rotate(-5deg) translateY(-30px) translateX(50px);
+  margin: 40px 0;
 }
 
 .marquee:hover {

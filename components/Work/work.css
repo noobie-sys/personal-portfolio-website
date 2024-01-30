@@ -41,9 +41,7 @@
     font-family: var(--family);
 }
 
-.middle_div {
-    margin-bottom: 20px;
-}
+
 
 .cta .button {
     display: flex;
@@ -58,4 +56,46 @@
 }
 .cta .button button:hover {
     color : yellowgreen
+}
+
+
+.middle_div {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: c;
+
+}
+
+.lower_div {
+    height: 10vh;
+    background-color: yellow;
+}
+
+.skill-logo {
+    width: 100%;
+    height: 100%;
+    background-color: #adff2f;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+
+}
+
+.skill-logo h2 {
+    font-family: var(--syne);
+    font-size: 2.5rem;
+    font-weight:900;
+    gap: 4px;
+    position: relative;
+    -webkit-text-stroke: 1px;
+}
+
+.skill-logo h2 > span {
+    margin-left: 30px;
+    font-size: 20px;
+    text-align: center;
+    
 }
