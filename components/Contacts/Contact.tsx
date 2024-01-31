@@ -12,6 +12,18 @@ import {
   RiTwitterXFill,
 } from "react-icons/ri";
 
+export const variants = {
+    hidden : {
+        opacity : 0,
+        translateX : -100
+    },
+    show : {
+        opacity : 1 ,
+        translateX : 0,
+        
+    }
+}
+
 const Contact = () => {
   const Text = "LET'S TALK ABOUT YOUR PROJECT".split(" ");
   return (
@@ -40,34 +52,39 @@ const Contact = () => {
 
       <div className="social-media-icons">
         <motion.div
-          initial={{ opacity: 0, translateX: -100 }}
-          whileInView={{ opacity: 1, translateX: 0 }}
-          transition={{ delay: 0.4 }}
+           variants={variants}
+           initial='hidden'
+           whileInView='show'
+          transition={{ delay: 0.2 }}
           className="instagram "
         >
           <CiInstagram size={82} className="instagram-icon icons" />
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, translateX: -100 }}
-          whileInView={{ opacity: 1, translateX: 0 }}
-          transition={{ delay: 0.5 }}
+           variants={variants}
+           initial='hidden'
+           whileInView='show'
+
+          transition={{ delay: 0.24 }}
           className="LinkedIn "
         >
           <RiLinkedinBoxFill size={82} className="linkedIn-icon icons" />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, translateX: -100 }}
-          whileInView={{ opacity: 1, translateX: 0 }}
-          transition={{ delay: 0.6 }}
+        variants={variants}
+          initial='hidden'
+          whileInView='show'
+          transition={{ delay: 0.27 }}
           className="github "
         >
           <RiGithubFill size={82} className="github-icon icons" />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, translateX: -100 }}
-          whileInView={{ opacity: 1, translateX: 0 }}
-          transition={{ delay: 0.7 }}
+           variants={variants}
+           initial='hidden'
+           whileInView='show'
+          transition={{ delay: 0.3 }}
           className="twitter "
         > 
           <RiTwitterXFill size={82} className="twitter-icon icons" />

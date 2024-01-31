@@ -10,19 +10,59 @@ import Reddit from "@/public/reddit-clone.webp";
 import Images from "@/public/space.jpg";
 // import { Image } from "@nextui-org/image";
 import { CiLocationArrow1 } from "react-icons/ci";
-
+import {motion} from 'framer-motion'
 import Image from "next/image";
+
+
+const variants = {
+  hidden : {
+    opacity : 0,
+    translateX : -100
+  },
+  show : {
+    opacity : 1,
+    translateX : 0
+  }
+}
+
+const variantsRight = {
+  hidden : {
+    opacity : 0,
+    translateX : 100
+  },
+  show : {
+    opacity : 1,
+    translateX : 0
+  }
+}
+
+
 const Work = () => {
   return (
     <div className="work-container">
       <div className="upper_div">
         <div className="heading">
-          <h1>Practice Projects</h1>
-          <h3>
+          <motion.h1 variants={variants}
+          initial="hidden"
+          whileInView='show'
+          transition={{delay : 0.1}}
+          
+          >Practice Projects</motion.h1>
+          <motion.h3 
+          variants={variants}
+          initial ="hidden"
+          whileInView='show'
+          transition={{delay : 0.15}}
+          >
             Practice projects where i use <span>my skills</span>.
-          </h3>
+          </motion.h3>
         </div>
-        <div className="cta">
+        <motion.div
+        variants={variantsRight}
+        initial='hidden'
+        whileInView='show'
+        transition={{delay : 0.12}}
+        className="cta">
           <h1>
             Check out more <br />
             portfolio I've worked on
@@ -38,13 +78,18 @@ const Work = () => {
               View More
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="middle_div">
         <div className="left_div widht_div">
-          <div className="upper_element">
+          <motion.div
+          variants={variants}
+          initial='hidden'
+          whileInView='show'
+          transition={{delay : 0.2 , duration : 0.5}}
+          className="upper_element">
             <Image src={Portfolio} alt="Face" />
-          </div>
+          </motion.div>
           <div className="lower_element">
             <Image src={Images} alt="Face" />
           </div>
