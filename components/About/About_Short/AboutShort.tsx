@@ -2,15 +2,22 @@ import React from 'react'
 import '@/components/About/about.css'
 import { Button } from '@nextui-org/button'
 import { FaArrowRight } from 'react-icons/fa'
-
+import { motion } from 'framer-motion'
 import code from "@/public/code.png";
 import Image from 'next/image';
+import { variants, variantsRight } from '@/utils/animation'
 
 
 const AboutShort = () => {
   return (
-    <div className="about">
-        <div className="about-desc">
+    <motion.div
+    
+    className="about">
+        <motion.div 
+        variants={variants}
+        initial="hidden"
+        whileInView='show'
+        className="about-desc">
           <h1>About Me</h1>
           <p>I can deliver results that exceed your <strong className=''>expectaions</strong>.</p>
           <div className="hire-button">
@@ -23,11 +30,16 @@ const AboutShort = () => {
               Hire me
             </Button>
           </div>
-        </div>
-        <div className="sticker">
+        </motion.div>
+        <motion.div
+        variants={variantsRight}
+        initial='hidden'
+        whileInView={'show'}
+        
+        className="sticker">
           <Image src={code} alt="Coding Image" width={200} height={200} className="code-image" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
   )
 }
 

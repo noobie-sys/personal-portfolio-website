@@ -45,6 +45,7 @@ const StickyCursor = () => {
         left: smoothMouse.x,
         top: smoothMouse.y,
       }}
+      id="cursor"
      
     ></motion.div>
   );

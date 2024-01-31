@@ -12,34 +12,9 @@ import Images from "@/public/space.jpg";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { imageVariants, variantsRight } from "@/utils/animation";
+import { imageVariants, variants, variantsRight } from "@/utils/animation";
 
-const variants = {
-  hidden: {
-    opacity: 0,
-    translateX: -100,
-  },
-  hiddenDown: {
-    opacity: 0,
-    translateY: 100,
-  },
-  show: {
-    opacity: 1,
-    translateX: 0,
-    transition:{
-      delay: 0.2,
-      duration: 0.3,
-    }
-  },
-  showDown: {
-    opacity: 1,
-    translateY: 0,
-    transition:{
-      delay: 0.2,
-      duration: 0.3,
-    }
-  },
-};
+
 
 
 
