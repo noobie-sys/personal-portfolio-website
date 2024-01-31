@@ -4,9 +4,10 @@ import { Button } from "@nextui-org/button";
 import Line from "../Line_design/Line";
 import { FaArrowRight } from "react-icons/fa";
 import Cards from "@/ui/card";
-import Face from "@/public/event.webp";
-import Images from "@/public/image.jpg";
-import Pic from "@/public/reddit-clone.webp";
+import Eventhub from "@/public/event.webp";
+import Portfolio from "@/public/portfolio.jpeg";
+import Reddit from "@/public/reddit-clone.webp";
+import Images from "@/public/space.jpg";
 // import { Image } from "@nextui-org/image";
 import { CiLocationArrow1 } from "react-icons/ci";
 
@@ -42,18 +43,18 @@ const Work = () => {
       <div className="middle_div">
         <div className="left_div widht_div">
           <div className="upper_element">
-            <Image src={Face} alt="Face" />
+            <Image src={Portfolio} alt="Face" />
           </div>
           <div className="lower_element">
             <Image src={Images} alt="Face" />
           </div>
         </div>
         <div className="center_div widht_div">
-          <Image src={Pic} alt="Face" />
+          <Image src={Reddit} alt="Reddit" />
         </div>
         <div className="right_div widht_div">
           <div className="right_inner_upper_div_element">
-            <Image src={Pic} alt="Face" />
+            <Image src={Eventhub} alt="Previous portflio site" />
           </div>
           <div className="right_inner_lower_div_element">
             <h1>View</h1>
