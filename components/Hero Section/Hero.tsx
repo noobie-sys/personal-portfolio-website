@@ -1,7 +1,7 @@
 import React from "react";
-import "@/components/Hero Section/Hero.css";
+import "./Hero.css";
 import Image from "next/image";
-import face from "@/public/face1.jpg";
+import face from "@/public/face5.jpg";
 import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -53,14 +53,21 @@ const Hero = (props: Props) => {
       </div>
       <motion.div
         initial={{ opacity: 0, scale: 0.3 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.4, duration: 0.4 }}
-        className="mouse"
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.2, duration: 0.3 }}
+        className="mouse relative z-50"
       >
         <div className="mouse-icon">
           <BsMouse size={24} className="icon-mouse" />
         </div>
         <h3 className="scroll">Scroll</h3>
+      </motion.div>
+      <motion.div
+      initial={{opacity : 0 , scale : 0.2}}
+      whileInView={{opacity : 1 , scale:1}}
+      transition={{delay : 0.3 , duration : 0.4}}
+      className="steve-jobs">
+        <Image src={face} alt="Steve Jobs"  />
       </motion.div>
     </div>
   );

@@ -13,10 +13,7 @@ import { CiLocationArrow1 } from "react-icons/ci";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { imageVariants, variants, variantsRight } from "@/utils/animation";
-
-
-
-
+import Link from "next/link";
 
 
 const Work = () => {
@@ -107,9 +104,9 @@ const Work = () => {
             <h1>View</h1>
             <h1>More</h1>
             <h1>Projects</h1>
-            <div className="redirect_link">
+            <Link href={'/about'} className="redirect_link">
               <CiLocationArrow1 size={100} className="arrow_icon" />
-            </div>
+            </Link>
           </motion.div>
         </div>
       </div>

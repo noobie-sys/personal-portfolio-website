@@ -21,20 +21,16 @@
 .name .name-element > h2 {
     color: rgb(197, 191, 191);
 }
-.main-div::before {
-    content: "";
+.steve-jobs {
     position: absolute;
     left: 30%;
     top: -12%;
-    background-image: url('../../public/face5.jpg');
     width: 100%;
     height: 100%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     filter: grayscale(80%);
-    margin-left: 70px;
-
 }
 
 .desc {
@@ -50,7 +46,7 @@
 .mouse {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
