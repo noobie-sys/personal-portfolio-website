@@ -1,4 +1,4 @@
-import React, { RefObject, forwardRef, useEffect } from "react";
+import React, { RefObject, forwardRef, useEffect, useRef } from "react";
 import "@/components/Skill/skill.css";
 import {
   TbBrandTypescript,
@@ -51,24 +51,66 @@ const Skill = () => {
     },
   ];
 
-  useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-  }, []);
+  const skillRef = useRef<HTMLDivElement>(null)
+
+  
+  useEffect(()=> {
+    
+    const cursor = document.querySelector<HTMLElement>('#cursor')
+
+    const skill_element = skillRef.current;
+    if(skill_element) {
+      skill_element.addEventListener('mouseover', () => {
+        if(cursor) {
+          cursor.style.width = "100px";
+          cursor.style.height = "100px";
+        }
+      })
+      skill_element.addEventListener('mouseleave', () => {
+        if(cursor) {
+          cursor.style.width = "40px"
+          cursor.style.height = "40px"
+        }
+      })
+    }
+
+    return () => {
+     if (skill_element){
+      skill_element.removeEventListener('mouseover', () => {
+        if(cursor) {
+          cursor.style.width = "100px"
+          cursor.style.height = "100px"
+        }
+      })
+      skill_element.removeEventListener('mouseleave', () => {
+        if(cursor) {
+          cursor.style.width = "20px"
+          cursor.style.height = "20px"
+        }
+      })
+     }
+    }
+
+  }, [])
+  
+  
   return (
     <div className="skill-div">
       <div className="skill-desc">
         <h1>Skill</h1>
         <h3>Skill that you need for your company.</h3>
       </div>
-      <div className="skill-set">
+      <div ref={skillRef} className="skill-set">
         {skills.map((el, i) => {
           return (
             <motion.div
+
               initial={{ opacity: 0, translateX: -100, translateY: 20 }}
               whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
               transition={{ delay: i * 0.05, duration: 0.2 }}
               className="skill-title"
               key={i}
+              id={`skill_${i}`}
             >
               {el.logo}
               <motion.h1

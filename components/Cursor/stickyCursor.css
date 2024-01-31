@@ -7,4 +7,5 @@
     pointer-events: none;
     z-index: 40;
     mix-blend-mode: difference;
+    transition: all 3s linear ease-in-out;
 }
