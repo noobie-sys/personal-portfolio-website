@@ -1,0 +1,30 @@
+.contact-container {
+    max-height: 100vh;
+    width: 100%;
+    /* background: rgb(58, 57, 57); */
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.contact-quote {
+    max-width: 600px;
+}
+
+.contact-quote h1 {
+    font-size: 8rem;
+    font-family: var(--cliamte);
+    line-height: 8rem;
+    color: rgb(227, 224, 224);
+    text-shadow: 5px 5px 10px rgb(24, 24, 24);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    width: 600px;
+}

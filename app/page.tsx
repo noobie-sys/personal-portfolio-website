@@ -9,6 +9,7 @@ import {  useRef } from "react";
 import StickyCursor from "@/components/Cursor/StickyCursor";
 import Work from "@/components/Work/Work";
 import Cards from "@/ui/card";
+import Contact from "@/components/Contacts/Contact";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       <Skill />
       <About />
       <Work />
-     
+     <Contact />
     </section>
   );
 }
