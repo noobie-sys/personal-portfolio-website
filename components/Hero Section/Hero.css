@@ -6,12 +6,20 @@
     padding: 40px 0;
 }
 .name {
-    line-height: 10rem;
-    font-size: 9rem;
+    line-height: 8rem;
+    font-size: 10rem;
+    height: fit-content;
     font-family: 'Climate Crisis', sans-serif;
     color : rgb(25, 20, 20);
     position: relative;
     z-index: 2;
+    margin-left: 50px;
+    margin-top: 60px;
+    
+}
+
+.name .name-element > h2 {
+    color: rgb(197, 191, 191);
 }
 .main-div::before {
     content: "";
@@ -30,12 +38,14 @@
 }
 
 .desc {
-    width: 30rem;
+    width: 40rem;
     margin: 20px 10px;
     font-family: 'Comfortaa', sans-serif;
-    font-size: 1.01rem;
+    font-size: 1.2rem;
     position: relative;
     z-index: 3;
+    margin-left: 50px;
+    margin-top: 40px;
 }
 .mouse {
     position: absolute;

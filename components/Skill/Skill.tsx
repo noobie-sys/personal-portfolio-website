@@ -4,8 +4,6 @@ import {
   TbBrandTypescript,
   TbBrandJavascript,
   TbBrandNextjs,
-  TbBrandFirebase,
-  TbBrandPython,
 } from "react-icons/tb";
 import {
   SiCsswizardry,
@@ -25,11 +23,11 @@ const Skill = () => {
     },
     {
       skill: "JavaScript",
-      logo: <TbBrandTypescript size={52} className="icon" />,
+      logo: <TbBrandJavascript size={52} className="icon" />,
     },
     {
       skill: "Next.js",
-      logo: <TbBrandJavascript size={52} className="icon" />,
+      logo: <TbBrandNextjs size={52} className="icon" />,
     },
     {
       skill: "CSS",
