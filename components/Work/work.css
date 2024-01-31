@@ -5,6 +5,7 @@
   justify-content: center;
   overflow: hidden;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .upper_div {
@@ -189,7 +190,7 @@
   top: 0;
   right: 0px;
   transform: translate(-40%, 25%);
-  border: 1px dashed gray;
+  /* border: 1px dashed gray; */
   padding: 40px;
   border-radius: 50%;
   align-items: center;
@@ -198,23 +199,37 @@
   align-items: center;
   cursor: pointer;
   transition: all 1s ease-in-out;
-  animation: spin 20s cubic-bezier(0.27, 0.13, 0.69, 0.97) infinite;
 }
 
-
+.redirect_link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  padding: 84px;
+  border: 1px dashed white;
+  border-radius: 50%;
+  animation: spin 20s cubic-bezier(0.27, 0.13, 0.69, 0.97) infinite;
+}
+.arrow_icon {
+  position: relative;
+  z-index: 20;
+}
 .redirect_link .arrow_icon:hover {
   transform: scale(1.1);
 }
 
-.redirect_link:hover {
+.redirect_link:hover::before {
   animation-play-state: paused;
 }
 
 @keyframes spin {
   to {
-    transform: translate(-40%, 25%) rotate(0);
+    transform:  rotate(0);
   }
   from {
-    transform: translate(-40%, 25%) rotate(360deg);
+    transform:  rotate(360deg);
   }
 }
