@@ -10,31 +10,38 @@ import Reddit from "@/public/reddit-clone.webp";
 import Images from "@/public/space.jpg";
 // import { Image } from "@nextui-org/image";
 import { CiLocationArrow1 } from "react-icons/ci";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 import Image from "next/image";
-
+import { imageVariants, variantsRight } from "@/utils/animation";
 
 const variants = {
-  hidden : {
-    opacity : 0,
-    translateX : -100
+  hidden: {
+    opacity: 0,
+    translateX: -100,
   },
-  show : {
-    opacity : 1,
-    translateX : 0
-  }
-}
+  hiddenDown: {
+    opacity: 0,
+    translateY: 100,
+  },
+  show: {
+    opacity: 1,
+    translateX: 0,
+    transition:{
+      delay: 0.2,
+      duration: 0.3,
+    }
+  },
+  showDown: {
+    opacity: 1,
+    translateY: 0,
+    transition:{
+      delay: 0.2,
+      duration: 0.3,
+    }
+  },
+};
 
-const variantsRight = {
-  hidden : {
-    opacity : 0,
-    translateX : 100
-  },
-  show : {
-    opacity : 1,
-    translateX : 0
-  }
-}
+
 
 
 const Work = () => {
@@ -42,27 +49,30 @@ const Work = () => {
     <div className="work-container">
       <div className="upper_div">
         <div className="heading">
-          <motion.h1 variants={variants}
-          initial="hidden"
-          whileInView='show'
-          transition={{delay : 0.1}}
-          
-          >Practice Projects</motion.h1>
-          <motion.h3 
-          variants={variants}
-          initial ="hidden"
-          whileInView='show'
-          transition={{delay : 0.15}}
+          <motion.h1
+            variants={variants}
+            initial="hidden"
+            whileInView="show"
+            transition={{ delay: 0.1 }}
+          >
+            Practice Projects
+          </motion.h1>
+          <motion.h3
+            variants={variants}
+            initial="hidden"
+            whileInView="show"
+            transition={{ delay: 0.15 }}
           >
             Practice projects where i use <span>my skills</span>.
           </motion.h3>
         </div>
         <motion.div
-        variants={variantsRight}
-        initial='hidden'
-        whileInView='show'
-        transition={{delay : 0.12}}
-        className="cta">
+          variants={variantsRight}
+          initial="hidden"
+          whileInView="show"
+          transition={{ delay: 0.12 }}
+          className="cta"
+        >
           <h1>
             Check out more <br />
             portfolio I've worked on
@@ -83,34 +93,49 @@ const Work = () => {
       <div className="middle_div">
         <div className="left_div widht_div">
           <motion.div
-          variants={variants}
-          initial='hidden'
-          whileInView='show'
-          transition={{delay : 0.2 , duration : 0.5}}
-          className="upper_element">
+            variants={variants}
+            initial="hidden"
+            whileInView="show"
+            className="upper_element"
+          >
             <Image src={Portfolio} alt="Face" />
           </motion.div>
-          <div className="lower_element">
+          <motion.div
+            variants={variants}
+            initial="hiddenDown"
+            whileInView="showDown"
+            className="lower_element"
+          >
             <Image src={Images} alt="Face" />
-          </div>
+          </motion.div>
         </div>
-        <div className="center_div widht_div">
+        <motion.div
+        variants={imageVariants}
+        initial="hidden"
+        whileInView='show'
+        className="center_div widht_div">
           <Image src={Reddit} alt="Reddit" />
-        </div>
+        </motion.div>
         <div className="right_div widht_div">
-          <div className="right_inner_upper_div_element">
+          <motion.div
+           variants={variantsRight}
+           initial="hidden"
+           whileInView={'show'}
+          className="right_inner_upper_div_element">
             <Image src={Eventhub} alt="Previous portflio site" />
-          </div>
-          <div className="right_inner_lower_div_element">
+          </motion.div>
+          <motion.div
+          variants={variantsRight}
+          initial="hiddenDown"
+          whileInView='showDown'
+          className="right_inner_lower_div_element">
             <h1>View</h1>
             <h1>More</h1>
             <h1>Projects</h1>
             <div className="redirect_link">
-
               <CiLocationArrow1 size={100} className="arrow_icon" />
-              
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="lower_div">
