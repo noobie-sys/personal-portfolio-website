@@ -4,9 +4,9 @@ import { Button } from "@nextui-org/button";
 import Line from "../Line_design/Line";
 import { FaArrowRight } from "react-icons/fa";
 import Cards from "@/ui/card";
-import Face from "@/public/face5.jpg";
+import Face from "@/public/event.webp";
 import Images from "@/public/image.jpg";
-import Pic from "@/public/wallpaperflare.com_wallpaper (2).jpg";
+import Pic from "@/public/reddit-clone.webp";
 // import { Image } from "@nextui-org/image";
 import { CiLocationArrow1 } from "react-icons/ci";
 
@@ -45,11 +45,11 @@ const Work = () => {
             <Image src={Face} alt="Face" />
           </div>
           <div className="lower_element">
-            <Image src={Pic} alt="Face" />
+            <Image src={Images} alt="Face" />
           </div>
         </div>
         <div className="center_div widht_div">
-          <Image src={Images} alt="Face" />
+          <Image src={Pic} alt="Face" />
         </div>
         <div className="right_div widht_div">
           <div className="right_inner_upper_div_element">

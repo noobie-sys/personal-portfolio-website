@@ -94,10 +94,9 @@
 .middle_div {
   margin-bottom: 20px;
   max-width: 100%;
-  height: 100%;
+  height: fit-content;
   padding: 10px;
   gap: 3px;
-  /* border: 1px solid #adff2f; */
   display: flex;
 }
 
@@ -114,7 +113,7 @@
   height: 100%;
 }
 .middle_div .left_div > div {
-  height: 50%;
+  max-height: 50%;
   overflow: hidden;
   cursor: pointer;
   border-radius: 8px;
@@ -122,7 +121,31 @@
 
 .middle_div .left_div .upper_element {
   width: 100%;
+  height: 400px;
+}
+
+.middle_div .left_div .lower_element {
+  height: 500px;
+  position: relative;
+}
+
+.lower_element::before {
+  content: "Sooon Later";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
   height: 300px;
+  transform: translate(40% , 40%);
+  color: #afafaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--cliamte);
+  font-size: 2rem;
+  text-shadow: 5px 5px 10px black;
+  z-index: 100;
+  pointer-events: none;
 }
 
 .middle_div img {
@@ -141,15 +164,17 @@
 .center_div {
   overflow: hidden;
   border-radius: 8px;
+  /* height: 100%; */
 }
-/* .center_div img {
+ .center_div img {
     width: 100%;
-    height:100%;
-    background-size: cover;
-    background-position: top;
-    transition: all 0.3s ease-in-out;
+    height:895px;
+    background-position: center;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
+/*
 .center_div  img:hover {
     transform: scale(1.2);
 
@@ -160,6 +185,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: fit-content;
 }
 
 .right_div > div {
@@ -184,6 +210,13 @@
   flex-direction: column;
   position: relative;
 }
+
+
+
+
+
+
+
 
 .redirect_link {
   position: absolute;
