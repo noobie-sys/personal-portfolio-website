@@ -1,17 +1,33 @@
 import React from "react";
 import "./contactForm.css";
 import { Textarea } from "@nextui-org/input";
-
+import { motion } from "framer-motion";
+import { Button } from "@nextui-org/button";
 const ContactForm = () => {
   return (
     <div className="contact-form">
       <form className="form-div">
         <div className="heading-div">
-          <h1>Contact</h1>
+          <motion.h1
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            Contact
+          </motion.h1>
         </div>
-        <div className="input-div">
+        <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3}}
+        className="input-div">
           <div className="name-input">
-            <input type="text" className="input-text" required />
+            <input
+              type="text"
+              className="input-text"
+              placeholder="Name"
+              required
+            />
           </div>
           <div className="email-input">
             <input
@@ -24,19 +40,25 @@ const ContactForm = () => {
             />
           </div>
           <div className="desc-input">
-            <Textarea
-              variant={"underlined"}
-              label="Description"
-              labelPlacement="outside"
-              placeholder="Enter your description"
-              className="col-span-12 md:col-span-6 mb-6 md:mb-0"
+            <textarea
+              name="textarea"
+              id="textarea"
+              cols={30}
+              rows={10}
+              placeholder="Describe why are you reaching me out"
             />
           </div>
           <div className="submit-input">
-            <button>Submit</button>
+          <Button
+              color="default"
+              variant="bordered"
+              className="px-10 py-5 rounded-[4px] "
+            >
+              Submit
+            </Button>
           </div>
-        </div>
-        <div className="social-media-icons"></div>
+        </motion.div>
+        
       </form>
     </div>
   );

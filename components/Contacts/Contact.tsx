@@ -3,27 +3,75 @@ import React, { useEffect, useRef } from "react";
 import "./contact.css";
 import { motion, useAnimate, useInView, stagger } from "framer-motion";
 import ContactForm from "./ContactFOrm/ContactForm";
+import { CiInstagram } from "react-icons/ci";
+import {
+  RiGithubFill,
+  RiInstagramFill,
+  RiLinkedinBoxFill,
+  RiTwitterFill,
+  RiTwitterXFill,
+} from "react-icons/ri";
 
 const Contact = () => {
   const Text = "LET'S TALK ABOUT YOUR PROJECT".split(" ");
   return (
     <motion.div className="contact-container">
-      <div className="contact-quote">
-        <motion.h1 transition={{ staggerChildren: 0.2 }}>
-          {Text.map((el, i) => (
-            <motion.span
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.1 }}
-              key={i}
-            >
-              {el}
-            </motion.span>
-          ))}
-        </motion.h1>
+      <div className="--contact-container">
+        <div className="contact-quote">
+          <motion.h1 transition={{ staggerChildren: 0.2 }}>
+            {Text.map((el, i) => (
+              <motion.span
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+            
+                key={i}
+                className={`span-${i}`}
+              >
+                {el}
+              </motion.span>
+            ))}
+          </motion.h1>
+        </div>
+        <div className="contact-form">
+          <ContactForm />
+        </div>
       </div>
-      <div className="contact-form">
-        <ContactForm />
+
+      <div className="social-media-icons">
+        <motion.div
+          initial={{ opacity: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ delay: 0.4 }}
+          className="instagram "
+        >
+          <CiInstagram size={82} className="instagram-icon icons" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ delay: 0.5 }}
+          className="LinkedIn "
+        >
+          <RiLinkedinBoxFill size={82} className="linkedIn-icon icons" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ delay: 0.6 }}
+          className="github "
+        >
+          <RiGithubFill size={82} className="github-icon icons" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ delay: 0.7 }}
+          className="twitter "
+        > 
+          <RiTwitterXFill size={82} className="twitter-icon icons" />
+        </motion.div>
       </div>
     </motion.div>
   );
