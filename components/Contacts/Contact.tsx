@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import "./contact.css";
 import { motion, useAnimate, useInView, stagger } from "framer-motion";
+import ContactForm from "./ContactFOrm/ContactForm";
 
 const Contact = () => {
   const Text = "LET'S TALK ABOUT YOUR PROJECT".split(" ");
@@ -22,7 +23,7 @@ const Contact = () => {
         </motion.h1>
       </div>
       <div className="contact-form">
-        <h1>Hello There</h1>
+        <ContactForm />
       </div>
     </motion.div>
   );
