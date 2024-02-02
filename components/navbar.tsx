@@ -10,9 +10,9 @@ import { FaMandalorian } from "react-icons/fa";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="">
+    <NextUINavbar maxWidth="xl" position="sticky" className="z-[1000000]">
       <div className="flex justify-between w-full h-full items-center ">
-        <div className="logo flex w-2/3 ">
+        <div className="logo flex w-2/3  ">
           <FaMandalorian size={36} />
 
         </div>
