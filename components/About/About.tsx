@@ -72,9 +72,43 @@ const About = () => {
           <h1>Some Asthethic Pics </h1>
         </div>
       </div>
-      <div className="heading">
-        <h1>About me</h1>
-      </div>
+      <motion.div 
+      
+
+      className="heading">
+        <motion.div
+        variants={variants}
+        initial='hidden'
+        whileInView={'show'}
+        transition={{delay : 0.2}}
+        className="desc-div">
+        <h1 className="" id="heading">About me</h1>
+           <p>Greetings! I'm Aman, a 19-year-old programmer who embarked on my coding journey back in 11th grade. Coding has been my passion, and I strive to learn and improve every day, dedicated to progressing in my programming skills.</p>
+        </motion.div>
+
+        <motion.div
+        variants={variants}
+        initial='hidden'
+        whileInView={'show'}
+        transition={{delay : 0.3}}
+        className="school">
+          <h1>School and Degree</h1>
+          <p>I Studied in Govt. Co-ed sarvodya vidhyalya, I choosed Commerce with Math after 10th standard. I currently not in collage but I have plan to pursue BCA degree.</p>
+        </motion.div>
+        <motion.div 
+        variants={variants}
+        initial='hidden'
+        whileInView={'show'}
+        transition={{delay : 0.4}}
+        className="long-desc-div">
+          <h1 className="coffee">
+            Something beside than Coding
+          </h1>
+          <div>
+            <p>Beside the coding stuff, I like to read and listen case study of business, <strong className="text-green-400">Craving for Cofee</strong>, Love to travel, and read Books sometimes</p>
+          </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

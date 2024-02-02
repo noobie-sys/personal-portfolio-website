@@ -94,7 +94,7 @@ const Work = () => {
            initial="hidden"
            whileInView={'show'}
           className="right_inner_upper_div_element">
-            <Image src={Eventhub} alt="Previous portflio site" />
+            <Image src={Eventhub} alt="Event Hub" />
           </motion.div>
           <motion.div
           variants={variantsRight}
@@ -113,17 +113,6 @@ const Work = () => {
       <div className="lower_div">
         
         <Line />
-        {/* <div className="skill-logo">
-          <h2>
-            Web Development <span>♠</span>
-          </h2>
-          <h2>
-            Web Development <span>♠</span>
-          </h2>
-          <h2>
-            Web Development <span>♠</span>
-          </h2>
-        </div> */}
       </div>
     </div>
   );
