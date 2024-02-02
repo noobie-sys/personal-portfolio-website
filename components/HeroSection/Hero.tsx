@@ -1,7 +1,6 @@
 import React from "react";
 import "./Hero.css";
 import Image from "next/image";
-import face from '../../public/face5.jpg'
 import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -10,8 +9,6 @@ type Props = {};
 const Hero = (props: Props) => {
   const aman = "Aman".split("");
   const gupta = "Gupta".split("");
-
-  console.log(aman);
   return (
     <div className="main-div w-full h-screen ">
       <div className="name dark:text-slate-300 ">
@@ -62,13 +59,13 @@ const Hero = (props: Props) => {
         </div>
         <h3 className="scroll">Scroll</h3>
       </motion.div>
-      <motion.div
+      {/* <motion.div
       initial={{opacity : 0 , scale : 0.2}}
       whileInView={{opacity : 1 , scale:1}}
       transition={{delay : 0.3 , duration : 0.4}}
       className="steve-jobs">
         <Image src={face} alt="Steve Jobs"  />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
