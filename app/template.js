@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Template({ children }) {
   return (
-    <div className="relative z-[4000]">
+    <div className="relative z-[1000000000] ">
       <motion.div
         className="slide-in"
         initial={{ scale: 0 }}
@@ -18,6 +18,7 @@ export default function Template({ children }) {
         exit={{ scale: 0 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] , delay : 0.2 }}
       />
+      
       {children}
     </div>
   );

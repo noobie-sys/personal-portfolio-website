@@ -39,12 +39,9 @@ export default function RootLayout({
         <SmoothScrolling>
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
             <div className="relative flex flex-col h-fit">
-      <StickyCursor  />
+              <StickyCursor />
               <Navbar />
-              <main className="p-40  pt-16  flex-grow ">
-                
-                {children}
-              </main>
+              <main className="p-40  pt-16  flex-grow ">{children}</main>
             </div>
           </Providers>
         </SmoothScrolling>
