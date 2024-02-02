@@ -45,9 +45,11 @@
     /* border: 1px solid green; */
     overflow: hidden;
 }
-.grid-image-div >  img {
+.grid-image-div {
     width: 400px;
     height: 100%;
+}
+.grid-image-div >  img {
     object-fit: cover;
 }
 

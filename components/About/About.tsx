@@ -4,10 +4,14 @@ import Line from "../Line_design/Line";
 import Image from "next/image";
 import aman from "@/public/aman.jpg";
 import image from "@/public/space.jpg";
-import image2 from "@/public/hello.jpg";
-type Props = {};
+import image2 from "@/public/aman/pic6.jpg";
+import image3 from "@/public/aman/pic3.jpeg";
+import image4 from "@/public/aman/pic2.jpeg";
+import image5 from "@/public/aman/pic1.jpeg";
+import image6 from "@/public/aman/amang.jpeg";
+import { motion } from "framer-motion";
 
-const About = (props: Props) => {
+const About = () => {
   return (
     <div className="main-header">
       <div className="column-grid-image">
@@ -17,25 +21,25 @@ const About = (props: Props) => {
               <Image src={aman} alt="Images" />
             </div>
             <div className="grid-image-div-2">
-              <Image src={image} alt="Images" />
+              <Image src={image5} alt="Images" />
             </div>
           </div>
           <div className="grid-2">
             <div className="grid2-image-div">
-              <Image src={image} alt="Images " />
+              <Image src={image2} alt="Images " />
             </div>
           </div>
           <div className="grid-3">
             <div className="grid3-image-div-1">
               <div className="grid3-inner-image">
-                <Image src={image} alt="Images" />
+                <Image src={image6} alt="Images" />
               </div>
               <div className="grid3-inner-image">
-                <Image src={image} alt="Images" />
+                <Image src={image3} alt="Images" />
               </div>
             </div>
             <div className="grid3-image-div-2">
-              <Image src={image} alt="Images" />
+              <Image src={image4} alt="Images" />
             </div>
           </div>
         </div>
