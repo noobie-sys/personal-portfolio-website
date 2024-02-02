@@ -1,7 +1,5 @@
 import React from "react";
 import "./about.css";
-import AboutShort from "./About_Short/AboutShort";
-import AboutLong from "./About_long/AboutLong";
 import Line from "../Line_design/Line";
 import Image from "next/image";
 import aman from "@/public/aman.jpg";
@@ -48,9 +46,6 @@ const About = (props: Props) => {
       <div className="heading">
         <h1>About me</h1>
       </div>
-      {/* <AboutShort />
-      <AboutLong />
-      <Line /> */}
     </div>
   );
 };

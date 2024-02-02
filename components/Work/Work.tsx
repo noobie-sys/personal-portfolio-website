@@ -111,7 +111,9 @@ const Work = () => {
         </div>
       </div>
       <div className="lower_div">
-        <div className="skill-logo">
+        
+        <Line />
+        {/* <div className="skill-logo">
           <h2>
             Web Development <span>♠</span>
           </h2>
@@ -121,7 +123,7 @@ const Work = () => {
           <h2>
             Web Development <span>♠</span>
           </h2>
-        </div>
+        </div> */}
       </div>
     </div>
   );

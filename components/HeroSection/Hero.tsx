@@ -3,6 +3,7 @@ import "./Hero.css";
 import Image from "next/image";
 import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
+import face from '@/public/face5.jpg'
 
 type Props = {};
 
@@ -59,13 +60,13 @@ const Hero = (props: Props) => {
         </div>
         <h3 className="scroll">Scroll</h3>
       </motion.div>
-      {/* <motion.div
+      <motion.div
       initial={{opacity : 0 , scale : 0.2}}
       whileInView={{opacity : 1 , scale:1}}
       transition={{delay : 0.3 , duration : 0.4}}
       className="steve-jobs">
         <Image src={face} alt="Steve Jobs"  />
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 };

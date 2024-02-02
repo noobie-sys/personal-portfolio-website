@@ -51,9 +51,10 @@
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 1s linear ease-in;
 }
-
+.social-media-icons > div .icons{
+    transition: all 0.3s linear;
+}
 .social-media-icons > div .icons:hover {
     transform: scale(1.1) ;
     /* color: #d6249f; */
