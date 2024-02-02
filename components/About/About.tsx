@@ -10,6 +10,7 @@ import image4 from "@/public/aman/pic2.jpeg";
 import image5 from "@/public/aman/pic1.jpeg";
 import image6 from "@/public/aman/amang.jpeg";
 import { motion } from "framer-motion";
+import { imageVariants, variants, variantsRight } from "@/utils/animation";
 
 const About = () => {
   return (
@@ -17,30 +18,54 @@ const About = () => {
       <div className="column-grid-image">
         <div className="column-images">
           <div className="grid-1">
-            <div className="grid-image-div-1">
+            <motion.div
+            variants={variants}
+            initial='hidden'
+            whileInView='show'
+            className="grid-image-div-1">
               <Image src={aman} alt="Images" />
-            </div>
-            <div className="grid-image-div-2">
+            </motion.div>
+            <motion.div
+            variants={variantsRight}
+            initial='hidden'
+            whileInView='show'
+            className="grid-image-div-2">
               <Image src={image5} alt="Images" />
-            </div>
+            </motion.div>
           </div>
           <div className="grid-2">
-            <div className="grid2-image-div">
+            <motion.div
+            variants={imageVariants}
+            initial='hidden'
+            whileInView='show'
+            className="grid2-image-div">
               <Image src={image2} alt="Images " />
-            </div>
+            </motion.div>
           </div>
           <div className="grid-3">
             <div className="grid3-image-div-1">
-              <div className="grid3-inner-image">
+              <motion.div
+              variants={imageVariants}
+              initial='hidden'
+              whileInView='show'
+              className="grid3-inner-image">
                 <Image src={image6} alt="Images" />
-              </div>
-              <div className="grid3-inner-image">
+              </motion.div>
+              <motion.div
+              variants={variantsRight}
+              initial='hidden'
+              whileInView='show'
+              className="grid3-inner-image">
                 <Image src={image3} alt="Images" />
-              </div>
+              </motion.div>
             </div>
-            <div className="grid3-image-div-2">
+            <motion.div 
+            variants={variantsRight}
+            initial='hiddenDown'
+            whileInView='showDown'
+            className="grid3-image-div-2">
               <Image src={image4} alt="Images" />
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="hello">
