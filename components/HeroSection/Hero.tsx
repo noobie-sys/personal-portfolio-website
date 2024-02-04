@@ -17,7 +17,7 @@ const Hero = (props: Props) => {
         <div className="name-element flex">
           {aman.map((el, i) => (
             <motion.h2
-              initial={{ opacity: 0, translateX: -200 }}
+              initial={{ opacity: 0, translateX: -50 }}
               whileInView={{ opacity: 1, translateX: 0 }}
               transition={{ delay: i * 0.09, duration: 0.4 }}
               className="flex   "
@@ -30,7 +30,7 @@ const Hero = (props: Props) => {
         <div className="flex name-element">
           {gupta.map((el, i) => (
             <motion.h2
-              initial={{ opacity: 0, translateX: -200 }}
+              initial={{ opacity: 0, translateX: -50 }}
               whileInView={{ opacity: 1, translateX: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               key={i}
@@ -54,7 +54,7 @@ const Hero = (props: Props) => {
         initial={{ opacity: 0, scale: 0.3 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2, duration: 0.3 }}
-        className="mouse relative z-50"
+        className="mouse z-50"
       >
         <div className="mouse-icon">
           <BsMouse size={24} className="icon-mouse" />

@@ -1,37 +1,10 @@
 
 
 /* Screen width 1200 px  */
-
-@media  (max-width : 1300px) {
-    .main-div{
-        padding: 20px 0;
-    }
-    .name {
-        margin-left: 20px;
-    }
-    .name-element {
-        font-size: 7rem;
-        line-height: 6rem;
-        margin-left: 40px;
-        margin-right: 35px;
-        
-    }
-    
-    .steve-jobs > img {
-        width: 100%;
-        height: 80%;
-        object-fit: contain;
-    }
-    .desc > h1 {
-        font-size: 1rem;
-        width: 80%;
-        margin-left: 40px;
-    }
-}
-/* Screen width 1000 px  */
+/* Screen width 1100 px  */
 
 
-@media  (max-width : 1000px) {
+@media  (max-width : 1100px) {
     .main-div{
         height: 80vh;
     }
@@ -63,10 +36,10 @@
     .desc > h1 {
         font-size: 14px;
         width: 60%;
-        margin-left: 50px;
+        margin-left: 12px;
     }
     .mouse {
-        bottom: 220px;
+        bottom: 80px;
     }
 }
 
@@ -74,23 +47,16 @@
     .main-div{
         padding: 20px 0;
     }
-    .name {
-        margin-left: 30px;
-    }
+    
     .name-element {
-        font-size: 5rem;
+        font-size: 4rem; 
         line-height: 1rem;
         margin-top: 60px;
-        padding-left: 40px;
-        
-        
     }
-
-    
     
     .steve-jobs > img {
-        width: 600px;
-        height: 600px;
+        width: 500px !important;
+        height: 500px !important;
         object-fit: contain;
     }
     .desc {
@@ -99,9 +65,8 @@
     .desc > h1 {
         font-size: 14px;
         width: 60%;
-        margin-left: 50px;
     }
     .mouse {
-        bottom: 220px;
+        bottom: 120px;
     }
 }
