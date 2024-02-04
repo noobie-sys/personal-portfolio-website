@@ -1,4 +1,5 @@
 import React from "react";
+import './responsive/responsive.css'
 import "./Hero.css";
 import Image from "next/image";
 import { BsMouse } from "react-icons/bs";

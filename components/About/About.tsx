@@ -11,6 +11,7 @@ import image5 from "@/public/aman/pic1.jpeg";
 import image6 from "@/public/aman/amang.jpeg";
 import { motion } from "framer-motion";
 import { imageVariants, variants, variantsRight } from "@/utils/animation";
+import '@/components/About/Responsive/responsive.css'
 
 const About = () => {
   return (
