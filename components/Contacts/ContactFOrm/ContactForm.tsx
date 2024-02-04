@@ -16,7 +16,7 @@ import {
 import { variants } from "../Contact";
 
 const ContactForm = () => {
-  const mouseRef = useRef<HTMLDivElement>(null);
+  const mouseRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const cursor = document.querySelector<HTMLDivElement>("#cursor");
