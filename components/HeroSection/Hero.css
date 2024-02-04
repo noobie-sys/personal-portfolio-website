@@ -33,6 +33,11 @@
     align-items: center;
     filter: grayscale(80%);
 }
+.steve-jobs > img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
 
 .desc {
     width: 40rem;

@@ -4,14 +4,7 @@ import "./contact.css";
 import "./responsive/responsive.css";
 import { motion, useAnimate, useInView, stagger } from "framer-motion";
 import ContactForm from "./ContactFOrm/ContactForm";
-import { CiInstagram } from "react-icons/ci";
-import {
-  RiGithubFill,
-  RiInstagramFill,
-  RiLinkedinBoxFill,
-  RiTwitterFill,
-  RiTwitterXFill,
-} from "react-icons/ri";
+
 
 export const variants = {
     hidden : {
@@ -46,51 +39,12 @@ const Contact = () => {
             ))}
           </motion.h1>
         </div>
-        <div className="contact-form">
+        <div className="contact-forms">
           <ContactForm />
         </div>
       </div>
 
-      <div className="social-media-icons">
-        <motion.div
-           variants={variants}
-           initial='hidden'
-           whileInView='show'
-          transition={{ delay: 0.2 }}
-          className="instagram "
-        >
-          <CiInstagram size={82} className="instagram-icon icons" />
-        </motion.div>
-
-        <motion.div
-           variants={variants}
-           initial='hidden'
-           whileInView='show'
-
-          transition={{ delay: 0.24 }}
-          className="LinkedIn "
-        >
-          <RiLinkedinBoxFill size={82} className="linkedIn-icon icons" />
-        </motion.div>
-        <motion.div
-        variants={variants}
-          initial='hidden'
-          whileInView='show'
-          transition={{ delay: 0.27 }}
-          className="github "
-        >
-          <RiGithubFill size={82} className="github-icon icons" />
-        </motion.div>
-        <motion.div
-           variants={variants}
-           initial='hidden'
-           whileInView='show'
-          transition={{ delay: 0.3 }}
-          className="twitter "
-        > 
-          <RiTwitterXFill size={82} className="twitter-icon icons" />
-        </motion.div>
-      </div>
+      
     </motion.div>
   );
 };

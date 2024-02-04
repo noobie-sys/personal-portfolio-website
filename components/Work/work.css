@@ -189,9 +189,6 @@
 }
 
 .right_inner_lower_div_element {
-  border-top: 5px solid rgb(40, 41, 40);
-  border-left: 5px solid rgb(40, 41, 40);
-  border-top-left-radius: 40px;
   margin-top: 4px;
   padding: 30px 10px;
   font-family: var(--cliamte);

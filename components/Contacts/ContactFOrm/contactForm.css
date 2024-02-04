@@ -3,70 +3,20 @@
     flex-direction: column;
     position: relative;
     align-items: center;
+    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
 }
 
-.form-div {
-    padding: 10px;
-}
-.heading-div {}
-
-.heading-div h1 {
-    font-size: 6rem;
-    font-family: var(--syne);
-    text-transform: uppercase;
-    -webkit-text-stroke: 5px;
-    color: rgb(157, 205, 62);
-}
-
-.input-div {
+.email {
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
 
-.input-div input {
-    width: 400px;
-    height: 60px;
-    background:transparent;
-    border: none;
-    border-bottom: 1px solid rgb(203, 203, 203);
-    margin-bottom: 20px;
-    font-family: var(--family);
-    outline : none ;
-    color: rgb(188, 187, 187);
-    position: relative;
 }
-
-.input-div input:focus::placeholder {
-    color: yellowgreen;
-}
-
-
-.input-div .desc-input  {
-    font-family: var(--family);
-}
-.input-div .desc-input textarea {
-    background:transparent;
-    outline : none ;
-    border: none ;
-    border-bottom: 1px solid gray;
-    width: 400px;
-}
-
-.input-div .desc-input textarea:focus::placeholder {
-    color: yellowgreen;
-}
-
-.submit-input {
-    width: 300px;
-    margin-top: 30px;
-}
-.submit-input button {
-    padding: 10px 100px;
-    font-family: var(--family);
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-left: 20px;
+.email .email-id {
+    font-family: var(--syne);
+    font-size: 7rem;
 }
