@@ -34,3 +34,12 @@ html::-webkit-scrollbar {
   transform-origin: top;
   transition: all 1s linear ease-in-out;
 }
+
+
+@media 
+(max-width: 700px) {
+    .mobile-responsive {
+      display: none;
+    }
+   
+}
