@@ -16,6 +16,9 @@ const About = () => {
   return (
     <div className="main-header">
       <div className="column-grid-image">
+      <div className="hello">
+          <h1 className="text-green-400">Some Asthethic Pics </h1>
+        </div>
         <div className="column-images">
           <div className="grid-1">
             <motion.div
@@ -68,9 +71,7 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-        <div className="hello">
-          <h1>Some Asthethic Pics </h1>
-        </div>
+        
       </div>
       <motion.div 
       

@@ -5,7 +5,7 @@
     background-color: white;
     border-radius: 50%;
     pointer-events: none;
-    z-index: 34240;
+    z-index: 33000;
     mix-blend-mode: difference;
     transition: all 3s linear ease-in-out;
 }
