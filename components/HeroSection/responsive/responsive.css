@@ -22,7 +22,6 @@
 
     .steve-jobs {
         justify-content: center;
-        top: 16%;
     }
     
     .steve-jobs > img {
@@ -44,14 +43,19 @@
 }
 
 @media  (max-width : 800px) {
-    .main-div{
-        padding: 20px 0;
+
+    .main-div {
+        height:90vh !important;
     }
-    
+  
     .name-element {
         font-size: 4rem; 
         line-height: 1rem;
         margin-top: 60px;
+    }
+
+    .steve-jobs {
+        top: -22% !important;
     }
     
     .steve-jobs > img {
@@ -67,6 +71,25 @@
         width: 60%;
     }
     .mouse {
-        bottom: 120px;
+        bottom: 200px !important;
+    }
+}
+
+@media (max-width : 650px) {
+    .main-div {
+        padding: 0 0;
+    }
+    .name-element {
+        font-size: 3rem; 
+        line-height: 0.7rem;
+        margin-top: 60px;
+        margin-right: 40px;
+    }
+    .name {
+        margin-left: 0;
+    }
+    .steve-jobs > img {
+        width: 400px !important;
+        height: 400px !important;
     }
 }

@@ -40,7 +40,7 @@ html, body {
   transform-origin: top;
   transition: all 1s linear ease-in-out;
 }
-
+/* 
 
 @media 
 (max-width: 700px) {
@@ -48,4 +48,4 @@ html, body {
       display: none;
     }
    
-}
+} */
