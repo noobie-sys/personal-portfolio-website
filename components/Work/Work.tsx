@@ -1,5 +1,6 @@
 import React from "react";
 import "./work.css";
+import './responsive/responsive.css'
 import { Button } from "@nextui-org/button";
 import Line from "../Line_design/Line";
 import { FaArrowRight } from "react-icons/fa";
@@ -38,29 +39,7 @@ const Work = () => {
             Practice projects where i use <span>my skills</span>.
           </motion.h3>
         </div>
-        <motion.div
-          variants={variantsRight}
-          initial="hidden"
-          whileInView="show"
-          transition={{ delay: 0.12 }}
-          className="cta"
-        >
-          <h1>
-            Check out more <br />
-            portfolio I've worked on
-          </h1>
-
-          <div className="button">
-            <Button
-              color="default"
-              variant="bordered"
-              endContent={<FaArrowRight />}
-              className="px-10 py-5 rounded-[4px] "
-            >
-              View More
-            </Button>
-          </div>
-        </motion.div>
+        
       </div>
       <div className="middle_div">
         <div className="left_div widht_div">

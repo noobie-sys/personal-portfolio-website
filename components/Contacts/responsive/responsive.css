@@ -1,6 +1,5 @@
-@media (max-width : 1300px) {
+@media (max-width : 1000px) {
     .contact-container {
-        overflow: hidden;
         height: fit-content;
     }
     .--contact-container {
@@ -9,4 +8,9 @@
     .contact-quote {
         max-width: 400px;
     }
+    .contact-quote h1  {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+    
 }

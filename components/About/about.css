@@ -175,3 +175,8 @@
     font-family: var(--cliamte);
     color: rgb(178, 177, 176);
 }
+.heading .desc-div > p {
+    font-size: 15px;
+    line-height: 2rem;
+    margin-top: 12px;
+}

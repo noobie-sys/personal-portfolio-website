@@ -1,0 +1,15 @@
+@media (max-width: 1000px ) {
+    .middle_div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .middle_div > .widht_div {
+        width: 100%;
+        /* border: 1px solid #f1f1f1; */
+      }
+      
+      .redirect_link {
+        transform: translate(-170% , 30%);
+      }
+}

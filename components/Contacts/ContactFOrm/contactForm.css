@@ -20,3 +20,14 @@
     font-family: var(--syne);
     font-size: 7rem;
 }
+
+@media (max-width : 1000px) {
+    .contact-form {
+        align-items: start;
+        margin-top: 70px;
+    }
+    .email {
+        justify-content: start;
+        line-height: 0.7rem;
+    }
+}

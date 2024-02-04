@@ -16,8 +16,9 @@
   padding: 0 80px;
 }
 .heading {
-  width: 50%;
+  width: 600px;
   font-family: var(--family);
+  line-height: 3rem;
 }
 .upper_div .heading h1 {
   font-size: 1rem;
@@ -30,31 +31,7 @@
 .heading h3 > span {
   color: greenyellow;
 }
-.cta {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.cta h1 {
-  font-size: 2rem;
-  font-family: var(--family);
-}
 
-.cta .button {
-  display: flex;
-  align-items: flex-start;
-  width: 60%;
-  padding: 0 40px;
-  margin-top: 10px;
-}
-.cta .button button {
-  font-family: var(--syne);
-  transition: color 0.4 linear ease-in;
-}
-.cta .button button:hover {
-  color: yellowgreen;
-}
 
 .skill-logo {
   width: 100%;
@@ -126,9 +103,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
-  height: 300px;
-  transform: translate(40% , 40%);
+  width: 100%;
+  height: 100%;
+  /* transform: translate(30% , 40%); */
   color: #afafaf;
   display: flex;
   justify-content: center;
