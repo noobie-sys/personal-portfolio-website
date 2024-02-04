@@ -1,0 +1,12 @@
+@media (max-width : 1300px) {
+    .contact-container {
+        overflow: hidden;
+        height: fit-content;
+    }
+    .--contact-container {
+        flex-direction: column;
+    }
+    .contact-quote {
+        max-width: 400px;
+    }
+}

@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import "./contact.css";
+import "./responsive/responsive.css";
 import { motion, useAnimate, useInView, stagger } from "framer-motion";
 import ContactForm from "./ContactFOrm/ContactForm";
 import { CiInstagram } from "react-icons/ci";

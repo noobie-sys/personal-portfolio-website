@@ -10,7 +10,7 @@ import Contact from "@/components/Contacts/Contact";
 
 export default function Home() {
   return (
-    <section className=" w-full h-full flex flex-col justify-center relative z-40">
+    <section className="mobile-responsive w-full h-full flex flex-col justify-center relative z-40">
       <Hero />
       <Skill />
       <About />

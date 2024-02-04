@@ -21,6 +21,7 @@
 .name .name-element > h2 {
     color: rgb(197, 191, 191);
 }
+
 .steve-jobs {
     position: absolute;
     left: 30%;
@@ -28,9 +29,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
     filter: grayscale(80%);
 }
 
