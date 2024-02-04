@@ -2,10 +2,11 @@
     position: absolute;
     width: 40px ;
     height:40px;
-    background-color: white;
+    background-color: rgb(194, 194, 194);
     border-radius: 50%;
+    border: 1px solid whitesmoke;
     pointer-events: none;
-    z-index: 33000;
+    z-index: 52;
     mix-blend-mode: difference;
-    transition: all 3s linear ease-in-out;
+    transition: all 0.05s linear ease-in ;
 }

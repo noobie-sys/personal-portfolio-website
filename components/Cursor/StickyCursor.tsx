@@ -1,10 +1,7 @@
 "use client";
 import React, {
-  MouseEventHandler,
-  Ref,
-  RefObject,
+
   useEffect,
-  useState,
 } from "react";
 import "./stickyCursor.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";

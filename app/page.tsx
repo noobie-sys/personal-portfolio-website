@@ -6,12 +6,11 @@ import Skill from "@/components/Skill/Skill";
 import About from "@/components/About/About";
 import {  useRef } from "react";
 import Work from "@/components/Work/Work";
-import Cards from "@/ui/card";
 import Contact from "@/components/Contacts/Contact";
 
 export default function Home() {
   return (
-    <section className=" w-full h-full flex flex-col justify-center">
+    <section className=" w-full h-full flex flex-col justify-center relative z-40">
       <Hero />
       <Skill />
       <About />
