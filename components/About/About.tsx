@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-import Line from "../Line_design/Line";
 import Image from "next/image";
 import aman from "@/public/aman.jpg";
 import image from "@/public/space.jpg";
@@ -52,7 +51,7 @@ const About = () => {
               variants={imageVariants}
               initial='hidden'
               whileInView='show'
-              className="grid3-inner-image">
+              className="grid3-inner-image grid3-inner-image-div-1">
                 <Image src={image6} alt="Images" />
               </motion.div>
               <motion.div

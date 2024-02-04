@@ -1,1 +1,31 @@
+/* // width less 1100 px */
 
+@media (max-width : 1200px) {
+    .heading #heading {
+        font-size: 3rem;
+    }
+    .school > h1 {
+        font-size: 2rem;
+    }
+    .coffee {
+        font-size: 2.5rem;
+    }
+}
+
+/* widht less than 800px  */
+
+@media (max-width : 900px) {
+    .column-images {
+        grid-template-columns: 4fr 4fr;
+    }
+    .grid-image-div-2 {
+        display: none;
+    }
+    .grid-3 .grid3-image-div-1 .grid3-inner-image:first-child {
+        display: none;
+    }
+    .grid-3 .grid3-image-div-1 .grid3-inner-image:last-child {
+        width: 100%;
+    }
+    
+}

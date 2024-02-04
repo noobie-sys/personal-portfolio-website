@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    /* flex-wrap: wrap; */
     font-family: var(--family);
     flex-direction: row-reverse;
     position: relative;
@@ -18,8 +17,8 @@
     /* padding: 20px; */
     height: 100%;
     display: grid;
-    grid-template-columns: 4fr 5fr ;
-    grid-template-rows: 2fr 3fr;
+    grid-template-columns: 4fr 6fr ;
+    grid-template-rows: 2fr;
     gap: 5px;
 }
 
