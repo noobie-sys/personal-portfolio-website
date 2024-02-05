@@ -5,12 +5,7 @@ import EventHub from "@/public/event.webp";
 import redditCLone from "@/public/reddit-clone.webp";
 import portfoliSite from "@/public/portfolio.jpeg";
 
-type Details = {
-  name: string;
-  desc: string;
-  image: string;
-  links: string;
-};
+
 
 const About = () => {
   const workDetails = [
