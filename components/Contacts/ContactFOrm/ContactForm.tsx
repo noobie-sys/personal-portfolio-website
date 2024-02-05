@@ -83,7 +83,7 @@ const ContactForm = () => {
             className="instagram "
           >
             <Link
-              href={"https://www.instagram.com/_.noobie__/"}
+              href={siteConfig.links.instagram}
               target="_blank"
             >
               <CiInstagram size={82} className="instagram-icon icons" />

@@ -7,6 +7,7 @@ import { Link } from "@nextui-org/link";
 import { siteConfig } from "@/config/site";
 import { TwitterIcon, GithubIcon, DiscordIcon } from "@/components/icons";
 import { FaMandalorian } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 
 export const Navbar = () => {
   return (
@@ -28,10 +29,10 @@ export const Navbar = () => {
             </Link>
             <Link
               isExternal
-              href={siteConfig.links.discord}
-              aria-label="Discord"
+              href={siteConfig.links.instagram}
+              aria-label="Instagram"
             >
-              <DiscordIcon className="text-default-500" />
+              <RiInstagramFill className="text-default-500" size={24} />
             </Link>
             <Link isExternal href={siteConfig.links.github} aria-label="Github">
               <GithubIcon className="text-default-500" />
