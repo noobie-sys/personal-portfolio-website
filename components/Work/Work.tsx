@@ -1,15 +1,11 @@
 import React from "react";
 import "./work.css";
 import './responsive/responsive.css'
-import { Button } from "@nextui-org/button";
 import Line from "../Line_design/Line";
-import { FaArrowRight } from "react-icons/fa";
-import Cards from "@/ui/card";
 import Eventhub from "@/public/event.webp";
 import Portfolio from "@/public/portfolio.jpeg";
 import Reddit from "@/public/reddit-clone.webp";
 import Images from "@/public/space.jpg";
-// import { Image } from "@nextui-org/image";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { motion } from "framer-motion";
 import Image from "next/image";
