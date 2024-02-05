@@ -1,10 +1,7 @@
 "use client";
 import Hero from "@/components/HeroSection/Hero";
-
-
 import Skill from "@/components/Skill/Skill";
 import About from "@/components/About/About";
-import {  useRef } from "react";
 import Work from "@/components/Work/Work";
 import Contact from "@/components/Contacts/Contact";
 

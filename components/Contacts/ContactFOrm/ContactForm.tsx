@@ -1,20 +1,17 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import "./contactForm.css";
-import { Textarea } from "@nextui-org/input";
 import { motion } from "framer-motion";
-import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { CiInstagram } from "react-icons/ci";
 import {
   RiGithubFill,
-  RiInstagramFill,
   RiLinkedinBoxFill,
-  RiTwitterFill,
   RiTwitterXFill,
 } from "react-icons/ri";
 import { variants } from "../Contact";
 import FramerMagneticEffect from "@/utils/framerMagneticEffect";
+import { SiteConfig, siteConfig } from "@/config/site";
 
 const ContactForm = () => {
   const mouseRef = useRef<HTMLAnchorElement>(null);
@@ -103,7 +100,7 @@ const ContactForm = () => {
             className="LinkedIn "
           >
             <Link
-              href={"https://www.linkedin.com/in/aman-gupta-382829290/"}
+              href={siteConfig.links.linkedIn}
               target="_blank"
             >
               <RiLinkedinBoxFill size={82} className="linkedIn-icon icons" />
@@ -118,7 +115,7 @@ const ContactForm = () => {
             transition={{ delay: 0.27 }}
             className="github "
           >
-            <Link href={"https://github.com/noobie-sys"} target="_blank">
+            <Link href={siteConfig.links.github} target="_blank">
               <RiGithubFill size={82} className="github-icon icons" />
             </Link>
           </motion.div>
@@ -132,7 +129,7 @@ const ContactForm = () => {
             transition={{ delay: 0.3 }}
             className="twitter "
           >
-            <Link href="https://twitter.com/noobie2103" target="_blank">
+            <Link href={siteConfig.links.twitter} target="_blank">
               <RiTwitterXFill size={82} className="twitter-icon icons" />
             </Link>
           </motion.div>
@@ -141,7 +138,7 @@ const ContactForm = () => {
       <div className="mt-12">
         <FramerMagneticEffect>
 
-        <Link href={'https://drive.google.com/file/d/1ZEGa1uu6oEPyE3y_ivmsHpOw_ApWR8Gq/view?usp=drive_link'}
+        <Link href={siteConfig.links.resume}
         target="_blank"
         className="text-[3rem] uppercase resume"
         >Resume</Link>
