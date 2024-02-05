@@ -9,6 +9,13 @@
   
 }
 
+.image-card > img {
+    width: 100%;
+    height: 300px;
+    object-position: top;
+    object-fit: cover;
+}
+
 .card-detail {
     padding: 5px 12px;
     display: flex;
