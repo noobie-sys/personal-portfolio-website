@@ -43,12 +43,12 @@ const ContactForm = () => {
       mouseRef_element.addEventListener("mouseleave", handleMouseLeave);
     }
 
-    return () => {
-      if (mouseRef_element) {
-        mouseRef_element.removeEventListener("mouseover", handleMouseOver);
-        mouseRef_element.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
+    // return () => {
+    //   if (mouseRef_element) {
+    //     mouseRef_element.removeEventListener("mouseover", handleMouseOver);
+    //     mouseRef_element.removeEventListener("mouseleave", handleMouseLeave);
+    //   }
+    // };
   }, []);
   return (
     <div className="contact-form">

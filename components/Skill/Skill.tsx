@@ -74,10 +74,10 @@ const Skill = () => {
       skill_element.addEventListener("mouseover", onMouseOver);
       skill_element.addEventListener("mouseleave", onMouseLeave);
 
-      return () => {
-        skill_element.removeEventListener("mouseover", onMouseOver);
-        skill_element.removeEventListener("mouseleave", onMouseLeave);
-      };
+      // return () => {
+      //   skill_element.removeEventListener("mouseover", onMouseOver);
+      //   skill_element.removeEventListener("mouseleave", onMouseLeave);
+      // };
     }
   }, []);
 

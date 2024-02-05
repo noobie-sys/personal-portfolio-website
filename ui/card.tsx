@@ -39,26 +39,26 @@ const Cards = ({ name, desc, image, link }: Props) => {
         }
       });
     }
-    return () => {
-      if (mouseRefElement) {
-        mouseRefElement.removeEventListener("mouseover", () => {
-          if (cursor) {
-            cursor.style.width = "100px";
-            cursor.style.height = "100px";
-            cursor.innerHTML = "<h1>Click Image</h1>";
-            cursor.style.transform = "translate(-50% ,-50%)";
-          }
-        });
-        mouseRefElement.removeEventListener("mouseleave", () => {
-          if (cursor) {
-            cursor.style.width = "40px";
-            cursor.style.height = "40px";
-            cursor.innerHTML = "";
-            cursor.style.transform = "translate(0,0)";
-          }
-        });
-      }
-    };
+    // return () => {
+    //   if (mouseRefElement) {
+    //     mouseRefElement.removeEventListener("mouseover", () => {
+    //       if (cursor) {
+    //         cursor.style.width = "100px";
+    //         cursor.style.height = "100px";
+    //         cursor.innerHTML = "<h1>Click Image</h1>";
+    //         cursor.style.transform = "translate(-50% ,-50%)";
+    //       }
+    //     });
+    //     mouseRefElement.removeEventListener("mouseleave", () => {
+    //       if (cursor) {
+    //         cursor.style.width = "40px";
+    //         cursor.style.height = "40px";
+    //         cursor.innerHTML = "";
+    //         cursor.style.transform = "translate(0,0)";
+    //       }
+    //     });
+    //   }
+    // };
   }, []);
 
   return (
