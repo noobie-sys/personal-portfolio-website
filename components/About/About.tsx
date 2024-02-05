@@ -84,7 +84,7 @@ const About = () => {
         transition={{delay : 0.2}}
         className="desc-div">
         <h1 className="" id="heading">About me</h1>
-           <p>Greetings! I'm Aman, a 19-year-old programmer who embarked on my coding journey back in 11th grade. Coding has been my passion, and I strive to learn and improve every day, dedicated to progressing in my programming skills.</p>
+           <p>Greetings! I am Aman, a 19-year-old programmer who embarked on my coding journey back in 11th grade. Coding has been my passion, and I strive to learn and improve every day, dedicated to progressing in my programming skills.</p>
         </motion.div>
 
         <motion.div
