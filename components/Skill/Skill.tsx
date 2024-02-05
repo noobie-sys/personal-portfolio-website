@@ -14,6 +14,7 @@ import {
 import { RiReactjsFill } from "react-icons/ri";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { motion } from "framer-motion";
+import FramerMagneticEffect from "@/utils/framerMagneticEffect";
 
 const Skill = () => {
   const skills = [
@@ -51,85 +52,90 @@ const Skill = () => {
     },
   ];
 
-  const skillRef = useRef<HTMLDivElement>(null)
+  const skillRef = useRef<HTMLDivElement>(null);
 
-  
-  useEffect(()=> {
-    
-    const cursor = document.querySelector<HTMLElement>('#cursor')
+  useEffect(() => {
+    const cursor = document.querySelector<HTMLElement>("#cursor");
 
     const skill_element = skillRef.current;
-    if(skill_element) {
-      skill_element.addEventListener('mouseover', () => {
-        if(cursor) {
+    if (skill_element) {
+      skill_element.addEventListener("mouseover", () => {
+        if (cursor) {
           cursor.style.width = "100px";
           cursor.style.height = "100px";
+          cursor.style.transform = "translate(-40% , -30%)";
         }
-      })
-      skill_element.addEventListener('mouseleave', () => {
-        if(cursor) {
-          cursor.style.width = "40px"
-          cursor.style.height = "40px"
+      });
+      skill_element.addEventListener("mouseleave", () => {
+        if (cursor) {
+          cursor.style.width = "40px";
+          cursor.style.height = "40px";
+          cursor.style.transform = "translate(0% , 0%)";
         }
-      })
+      });
     }
 
     return () => {
-     if (skill_element){
-      skill_element.removeEventListener('mouseover', () => {
-        if(cursor) {
-          cursor.style.width = "100px"
-          cursor.style.height = "100px"
-        }
-      })
-      skill_element.removeEventListener('mouseleave', () => {
-        if(cursor) {
-          cursor.style.width = "20px"
-          cursor.style.height = "20px"
-        }
-      })
-     }
-    }
+      if (skill_element) {
+        skill_element.removeEventListener("mouseover", () => {
+          if (cursor) {
+            cursor.style.width = "100px";
+            cursor.style.height = "100px";
+            cursor.style.transform = "translate(-40% , -30%)";
+          }
+        });
+        skill_element.removeEventListener("mouseleave", () => {
+          if (cursor) {
+            cursor.style.width = "20px";
+            cursor.style.height = "20px";
+            cursor.style.transform = "translate(0% , 0%)";
+          }
+        });
+      }
+    };
+  }, []);
 
-  }, [])
-  
-  
   return (
     <div className="skill-div">
       <div className="skill-desc">
         <h1>Skill</h1>
         <h3>Skill that you need for your company.</h3>
       </div>
-      <div ref={skillRef} className="skill-set">
+      <div ref={skillRef} className="skill-set cursor-pointer">
         {skills.map((el, i) => {
           return (
-            <motion.div
-
-              initial={{ opacity: 0, translateX: -100, translateY: 20 }}
-              whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
-              transition={{ delay: i * 0.05, duration: 0.2 }}
-              className="skill-title"
-              key={i}
-              id={`skill_${i}`}
-            >
-              {el.logo}
-              <motion.h1
-                initial={{ scale: 0.3, opacity: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4 }}
-                className="skill-name"
-              >
-                {el.skill}
-              </motion.h1>
-            </motion.div>
+            <div key={i}>
+              <FramerMagneticEffect>
+                <motion.div
+                  initial={{ opacity: 0, translateX: -100, translateY: 20 }}
+                  whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
+                  transition={{ delay: i * 0.05, duration: 0.2 }}
+                  className="skill-title"
+                  id={`skill_${i}`}
+                >
+                  {el.logo}
+                  <motion.h1
+                    initial={{ scale: 0.3, opacity: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="skill-name"
+                  >
+                    {el.skill}
+                  </motion.h1>
+                </motion.div>
+              </FramerMagneticEffect>
+            </div>
           );
         })}
       </div>
-      <motion.h1  
-      initial={{ scale: 0.3, opacity: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.5 }}
-      className="coming-soon">More skills to coming in way..</motion.h1>
+      <motion.h1
+        initial={{ scale: 0.3, opacity: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5 }}
+        className="coming-soon"
+      >
+        More skills coming in way..
+      </motion.h1>
     </div>
   );
 };
