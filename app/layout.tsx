@@ -40,8 +40,8 @@ export default function RootLayout({
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
             <div className="relative flex flex-col">
               <Navbar />
-              <main className="p-10 sm:p-1 pt-5  ">
               <StickyCursor />
+              <main className="p-10 sm:p-1 pt-5  ">
                 
                 {children}
                 
