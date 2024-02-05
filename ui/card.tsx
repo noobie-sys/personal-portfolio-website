@@ -5,6 +5,7 @@ import Image, { ImageProps } from "next/image";
 import "./card.css";
 import Link from "next/link";
 import FramerMagneticEffect from "@/utils/framerMagneticEffect";
+import { siteConfig } from "@/config/site";
 
 type Props = {
   name : string,
@@ -16,26 +17,24 @@ type Props = {
 
 const Cards = () => {
   return (
-    <FramerMagneticEffect>
+    <FramerMagneticEffect >
      
-      <div className="card-div max-w-sm  ">
-        <Link href="#">
+      <div  className="card-div max-w-sm  ">
+        
+
+        <Link href={siteConfig.links.github}>
           <Image className="rounded-t-lg object-cover" src={Face} alt="" />
         </Link>
         <div className="card-detail">
-          <Link href="#">
+          <div>
             <h5 className="mb-2 ml-3 text-2xl font-bold tracking-tight">
               Project 1
             </h5>
-          </Link>
-          <p className="mb-3 font-normal ">
+          </div>
+          <p className="mb-14 font-normal  ">
             Here are the biggest enterprise technology acquisitions of 2021 so
             far, in reverse chronological order.
           </p>
-
-          <Link href="#" className="flex items-center  redirect-link-project ">
-            Take me
-          </Link>
         </div>
       </div>
     </FramerMagneticEffect>
