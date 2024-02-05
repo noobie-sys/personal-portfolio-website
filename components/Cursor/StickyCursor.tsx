@@ -28,7 +28,7 @@ const StickyCursor = () => {
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
     };
-  }, [manageMouseMove]);
+  }, []);
   return (
     <motion.div
       className="cursor"
