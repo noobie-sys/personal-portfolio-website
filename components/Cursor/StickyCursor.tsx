@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import "./stickyCursor.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
@@ -16,12 +16,12 @@ const StickyCursor = () => {
     x: useSpring(mouse.x, smoothOption),
     y: useSpring(mouse.y, smoothOption),
   };
-  const manageMouseMove = (e: MouseEvent) => {
+  const manageMouseMove = useCallback((e: MouseEvent) => {
     // console.log(e.clientX)
     const { pageX, pageY } = e;
     mouse.x.set(pageX - cursorSize / 2);
     mouse.y.set(pageY - cursorSize / 2);
-  };
+  }, [mouse.x, mouse.y]);
   useEffect(() => {
     window.addEventListener("mousemove", manageMouseMove);
 
