@@ -62,7 +62,6 @@ const Cards = ({ name, desc, image, link }: Props) => {
   }, []);
 
   return (
-    <FramerMagneticEffect>
       <div className="card-div max-w-sm  " ref={mouseRef}>
         <Link href={link} className="image-card">
           <Image className="rounded-t-lg object-cover" src={image} alt="" />
@@ -76,7 +75,6 @@ const Cards = ({ name, desc, image, link }: Props) => {
           <p className="mb-14 font-normal  ">{desc}</p>
         </div>
       </div>
-    </FramerMagneticEffect>
   );
 };
 
