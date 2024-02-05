@@ -85,9 +85,11 @@ const ContactForm = () => {
             transition={{ delay: 0.2 }}
             className="instagram "
           >
-            <Link href={'/'} >
-
-            <CiInstagram size={82} className="instagram-icon icons" />
+            <Link
+              href={"https://www.instagram.com/_.noobie__/"}
+              target="_blank"
+            >
+              <CiInstagram size={82} className="instagram-icon icons" />
             </Link>
           </motion.div>
         </FramerMagneticEffect>
@@ -100,7 +102,12 @@ const ContactForm = () => {
             transition={{ delay: 0.24 }}
             className="LinkedIn "
           >
-            <RiLinkedinBoxFill size={82} className="linkedIn-icon icons" />
+            <Link
+              href={"https://www.linkedin.com/in/aman-gupta-382829290/"}
+              target="_blank"
+            >
+              <RiLinkedinBoxFill size={82} className="linkedIn-icon icons" />
+            </Link>
           </motion.div>
         </FramerMagneticEffect>
         <FramerMagneticEffect>
@@ -111,7 +118,9 @@ const ContactForm = () => {
             transition={{ delay: 0.27 }}
             className="github "
           >
-            <RiGithubFill size={82} className="github-icon icons" />
+            <Link href={"https://github.com/noobie-sys"} target="_blank">
+              <RiGithubFill size={82} className="github-icon icons" />
+            </Link>
           </motion.div>
         </FramerMagneticEffect>
 
@@ -123,8 +132,19 @@ const ContactForm = () => {
             transition={{ delay: 0.3 }}
             className="twitter "
           >
-            <RiTwitterXFill size={82} className="twitter-icon icons" />
+            <Link href="https://twitter.com/noobie2103" target="_blank">
+              <RiTwitterXFill size={82} className="twitter-icon icons" />
+            </Link>
           </motion.div>
+        </FramerMagneticEffect>
+      </div>
+      <div className="mt-12">
+        <FramerMagneticEffect>
+
+        <Link href={'https://drive.google.com/file/d/1ZEGa1uu6oEPyE3y_ivmsHpOw_ApWR8Gq/view?usp=drive_link'}
+        target="_blank"
+        className="text-[3rem] uppercase resume"
+        >Resume</Link>
         </FramerMagneticEffect>
       </div>
     </div>
