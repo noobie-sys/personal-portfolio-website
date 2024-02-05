@@ -82,7 +82,7 @@ const Work = () => {
             <h1>More</h1>
             <h1>Projects</h1>
             </div>
-            <Link href={'/about'} className="redirect_link">
+            <Link href={'/project'} className="redirect_link">
               <CiLocationArrow1 size={100} className="arrow_icon" />
             </Link>
           </motion.div>
