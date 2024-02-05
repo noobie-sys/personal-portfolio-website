@@ -58,42 +58,29 @@ const Skill = () => {
     const cursor = document.querySelector<HTMLElement>("#cursor");
 
     const skill_element = skillRef.current;
-    if (skill_element) {
-      skill_element.addEventListener("mouseover", () => {
-        if (cursor) {
-          cursor.style.width = "100px";
-          cursor.style.height = "100px";
-          cursor.style.transform = "translate(-40% , -30%)";
-        }
-      });
-      skill_element.addEventListener("mouseleave", () => {
-        if (cursor) {
-          cursor.style.width = "40px";
-          cursor.style.height = "40px";
-          cursor.style.transform = "translate(0% , 0%)";
-        }
-      });
-    }
+    if (skill_element && cursor) {
+      const onMouseOver = () => {
+        cursor.style.width = "100px";
+        cursor.style.height = "100px";
+        cursor.style.transform = "translate(-40% , -30%)";
+      };
 
-    return () => {
-      if (skill_element) {
-        skill_element.removeEventListener("mouseover", () => {
-          if (cursor) {
-            cursor.style.width = "100px";
-            cursor.style.height = "100px";
-            cursor.style.transform = "translate(-40% , -30%)";
-          }
-        });
-        skill_element.removeEventListener("mouseleave", () => {
-          if (cursor) {
-            cursor.style.width = "20px";
-            cursor.style.height = "20px";
-            cursor.style.transform = "translate(0% , 0%)";
-          }
-        });
-      }
-    };
+      const onMouseLeave = () => {
+        cursor.style.width = "40px";
+        cursor.style.height = "40px";
+        cursor.style.transform = "translate(0% , 0%)";
+      };
+
+      skill_element.addEventListener("mouseover", onMouseOver);
+      skill_element.addEventListener("mouseleave", onMouseLeave);
+
+      return () => {
+        skill_element.removeEventListener("mouseover", onMouseOver);
+        skill_element.removeEventListener("mouseleave", onMouseLeave);
+      };
+    }
   }, []);
+
 
   return (
     <div className="skill-div">

@@ -8,19 +8,17 @@ import FramerMagneticEffect from "@/utils/framerMagneticEffect";
 import { siteConfig } from "@/config/site";
 
 type Props = {
-  name : string,
-  desc : string ,
-  image : StaticImageData,
-  link : string
-}
+  name: string;
+  desc: string;
+  image: StaticImageData;
+  link: string;
+};
 
+const Cards = ({ name, desc, image, link }: Props) => {
+  const mouseRef = useRef<HTMLDivElement>(null);
 
-const Cards = ({name , desc , image , link} : Props) => {
-  const mouseRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => 
-  {
-    const cursor = document.querySelector<HTMLElement>('#cursor');
+  useEffect(() => {
+    const cursor = document.querySelector<HTMLElement>("#cursor");
     const mouseRefElement = mouseRef.current;
 
     if (mouseRefElement) {
@@ -60,19 +58,12 @@ const Cards = ({name , desc , image , link} : Props) => {
           }
         });
       }
-    }
-
-  } , [])
-
-
-
+    };
+  }, []);
 
   return (
-    <FramerMagneticEffect >
-     
-      <div  className="card-div max-w-sm  " ref={mouseRef}>
-        
-
+    <FramerMagneticEffect>
+      <div className="card-div max-w-sm  " ref={mouseRef}>
         <Link href={link} className="image-card">
           <Image className="rounded-t-lg object-cover" src={image} alt="" />
         </Link>
@@ -82,9 +73,7 @@ const Cards = ({name , desc , image , link} : Props) => {
               {name}
             </h5>
           </div>
-          <p className="mb-14 font-normal  ">
-            {desc}
-          </p>
+          <p className="mb-14 font-normal  ">{desc}</p>
         </div>
       </div>
     </FramerMagneticEffect>
