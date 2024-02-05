@@ -80,9 +80,12 @@ const Work = () => {
           initial="hiddenDown"
           whileInView='showDown'
           className="right_inner_lower_div_element">
+            <div>
+
             <h1>View</h1>
             <h1>More</h1>
             <h1>Projects</h1>
+            </div>
             <Link href={'/about'} className="redirect_link">
               <CiLocationArrow1 size={100} className="arrow_icon" />
             </Link>

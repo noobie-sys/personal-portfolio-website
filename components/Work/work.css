@@ -78,8 +78,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 14px;
-  height: 100%;
+  padding: 5px;
 }
 .middle_div .left_div > div {
   max-height: 50%;
@@ -105,7 +104,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* transform: translate(30% , 40%); */
   color: #afafaf;
   display: flex;
   justify-content: center;
@@ -136,7 +134,7 @@
   border-radius: 8px;
   /* height: 100%; */
   width: 100%;
-  height:895px;
+  height:900px;
 }
  .center_div img {
    
@@ -150,12 +148,12 @@
 .right_div {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: fit-content;
 }
 
 .right_div > div {
-  height: 50%;
+  height: 600px;
   width: 100%;
   overflow: hidden;
 }
@@ -171,23 +169,21 @@
   font-family: var(--cliamte);
   display: flex;
   font-size: 4rem;
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: space-between;
   position: relative;
 }
 
 
 .redirect_link {
-  position: absolute;
-  top: 0;
-  right: 0px;
-  transform: translate(-40%, 25%);
+  position: relative;
+  margin: 40px 20px;
+  /* transform: translate(-40%, 25%); */
   /* border: 1px dashed gray; */
   padding: 40px;
   border-radius: 50%;
   align-items: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
   cursor: pointer;
   transition: all 1s ease-in-out;
 }
