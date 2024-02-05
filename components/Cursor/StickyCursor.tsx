@@ -32,7 +32,7 @@ const StickyCursor = () => {
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mousePosition.x, mousePosition.y, cursorSize]);
+  }, [mousePosition.x, mousePosition.y]);
 
   return (
     <motion.div
