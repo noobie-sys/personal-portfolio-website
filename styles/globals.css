@@ -46,6 +46,7 @@ html, body {
 (max-width: 650px) {
     .mobile-responsive {
       display: none;
+      position: relative;
     }
    
 }
