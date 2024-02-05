@@ -3,40 +3,43 @@ import React, { useCallback, useEffect } from "react";
 import "./stickyCursor.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
+
+
 const StickyCursor = () => {
   const cursorSize = 40;
 
-  const mouse = {
+  const mousePosition = {
     x: useMotionValue(0),
     y: useMotionValue(0),
   };
 
-  const smoothOption = { damping: 20, stiffness: 300, mass: 0.5 };
-  const smoothMouse = {
-    x: useSpring(mouse.x, smoothOption),
-    y: useSpring(mouse.y, smoothOption),
+  const springOptions = { damping: 20, stiffness: 300, mass: 0.5 };
+  const smoothMousePosition = {
+    x: useSpring(mousePosition.x, springOptions),
+    y: useSpring(mousePosition.y, springOptions),
   };
-  const manageMouseMove = useCallback((e: MouseEvent) => {
-    // console.log(e.clientX)
-    const { pageX, pageY } = e;
-    mouse.x.set(pageX - cursorSize / 2);
-    mouse.y.set(pageY - cursorSize / 2);
-  }, [mouse.x, mouse.y]);
+
   useEffect(() => {
-    window.addEventListener("mousemove", manageMouseMove);
+    const handleMouseMove = (e: MouseEvent) => {
+      const { pageX, pageY } = e;
+      mousePosition.x.set(pageX - cursorSize / 2);
+      mousePosition.y.set(pageY - cursorSize / 2);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", manageMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [mousePosition.x, mousePosition.y, cursorSize]);
+
   return (
     <motion.div
       className="cursor"
       style={{
-        left: smoothMouse.x,
-        top: smoothMouse.y,
+        x: smoothMousePosition.x,
+        y: smoothMousePosition.y,
       }}
       id="cursor"
     ></motion.div>
