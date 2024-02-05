@@ -28,7 +28,9 @@ const StickyCursor = () => {
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
     };
-  }, []);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [manageMouseMove]);
   return (
     <motion.div
       className="cursor"
