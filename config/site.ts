@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Aman Personal portfolio",
+	name: "Aman Gupta - Full stack developer",
 	description: "Make beautiful websites regardless of your design experience.",
 	
 	links: {
