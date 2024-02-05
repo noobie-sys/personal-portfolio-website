@@ -19,7 +19,7 @@ export const variants = {
 }
 
 const Contact = () => {
-  const Text = "LET'S TALK ABOUT YOUR PROJECT".split(" ");
+  const Text = "LET TALK ABOUT YOUR PROJECT".split(" ");
   return (
     <motion.div className="contact-container">
       <div className="--contact-container">

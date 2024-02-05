@@ -15,6 +15,8 @@ const StickyCursor = () => {
     y: useMotionValue(0),
   };
 
+  
+
   const smoothOption = { damping: 20, stiffness: 300, mass: 0.5 };
   const smoothMouse = {
     x: useSpring(mouse.x, smoothOption),

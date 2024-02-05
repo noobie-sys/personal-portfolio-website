@@ -17,7 +17,7 @@ const About = () => {
     <div className="main-header">
       <div className="column-grid-image">
       <div className="hello">
-          <h1 className="text-green-400">Some Asthethic Pics </h1>
+          <h1 className="text-green-400 text-[1.2rem]">Some Asthethic Pics </h1>
         </div>
         <div className="column-images">
           <div className="grid-1">
