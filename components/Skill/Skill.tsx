@@ -92,7 +92,6 @@ const Skill = () => {
         {skills.map((el, i) => {
           return (
             <div key={i}>
-              <FramerMagneticEffect>
                 <motion.div
                   initial={{ opacity: 0, translateX: -100, translateY: 20 }}
                   whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
@@ -110,7 +109,6 @@ const Skill = () => {
                     {el.skill}
                   </motion.h1>
                 </motion.div>
-              </FramerMagneticEffect>
             </div>
           );
         })}
