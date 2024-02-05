@@ -39,7 +39,7 @@ const About = () => {
         Some showcase <span className="">Projects</span>
       </h1>
 
-      <div className="flex flex-wrap gap-4 justify-center items-center ">
+      <div className="flex flex-wrap gap-4 justify-center  ">
         {workDetails.map((el, i) => (
           <Cards
             desc={el.desc}
