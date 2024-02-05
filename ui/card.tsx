@@ -1,32 +1,44 @@
-import React, { useState } from "react";
-import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
-import { Button } from "@nextui-org/button";
-import face from "@/public/face5.jpg";
-import { HeartIcon } from "@/components/icons";
-import { Image } from "@nextui-org/image";
+"use client";
+import React, { AnchorHTMLAttributes } from "react";
+import Face from "../public/space.jpg";
+import Image, { ImageProps } from "next/image";
+import "./card.css";
+import Link from "next/link";
+import FramerMagneticEffect from "@/utils/framerMagneticEffect";
+
+type Props = {
+  name : string,
+  desc : string ,
+  image : ImageProps,
+  link : string
+}
+
+
 const Cards = () => {
-  const [liked, setLiked] = useState(false);
   return (
-      <Card
-        isBlurred
-        className="border-none max-w-[610px]"
-        shadow="sm"
-      >
-        <CardBody>
-          
-            <div className="relative w-[500px]">
-              <Image
-                alt="Album cover"
-                className="object-cover"
-                isZoomed
-                height={"100%"}
-                width={150}
-                shadow="md"
-                src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              />
-            </div>
-        </CardBody>
-      </Card>
+    <FramerMagneticEffect>
+     
+      <div className="card-div max-w-sm  ">
+        <Link href="#">
+          <Image className="rounded-t-lg object-cover" src={Face} alt="" />
+        </Link>
+        <div className="card-detail">
+          <Link href="#">
+            <h5 className="mb-2 ml-3 text-2xl font-bold tracking-tight">
+              Project 1
+            </h5>
+          </Link>
+          <p className="mb-3 font-normal ">
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
+
+          <Link href="#" className="flex items-center  redirect-link-project ">
+            Take me
+          </Link>
+        </div>
+      </div>
+    </FramerMagneticEffect>
   );
 };
 

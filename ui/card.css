@@ -1,3 +1,34 @@
-.card {
-    
+.card-div {
+  background: rgba(150, 155, 153, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  font-family: var(--family);
+  
+}
+
+.card-detail {
+    padding: 5px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.redirect-link-project {
+    border:1px solid rgb(97, 95, 95);
+    border-radius: 10px;
+    margin-top: 12px;
+    width: 100px;
+    padding: 6px;
+}
+.work-heading {
+    font-size:4vw;
+    font-family: var(--cliamte);
+    color: rgb(206, 206, 206);
+    text-align: center;
+}
+.work-heading > span {
+    color : yellowgreen;
 }
