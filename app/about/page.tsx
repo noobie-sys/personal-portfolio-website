@@ -34,53 +34,7 @@ const About = () => {
     },
   ];
 
-  const mouseRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => 
-  {
-    const cursor = document.querySelector<HTMLElement>('#cursor');
-    const mouseRefElement = mouseRef.current;
-
-    if (mouseRefElement) {
-      mouseRefElement.addEventListener("mouseover", () => {
-        if (cursor) {
-          cursor.style.width = "100px";
-          cursor.style.height = "100px";
-          cursor.innerHTML = "<h1>Click Me</h1>";
-          cursor.style.transform = "translate(-50% ,-50%)";
-        }
-      });
-      mouseRefElement.addEventListener("mouseleave", () => {
-        if (cursor) {
-          cursor.style.width = "40px";
-          cursor.style.height = "40px";
-          cursor.innerHTML = "";
-          cursor.style.transform = "translate(0,0)";
-        }
-      });
-    }
-    return () => {
-      if (mouseRefElement) {
-        mouseRefElement.removeEventListener("mouseover", () => {
-          if (cursor) {
-            cursor.style.width = "100px";
-            cursor.style.height = "100px";
-            cursor.innerHTML = "<h1>Click Me</h1>";
-            cursor.style.transform = "translate(-50% ,-50%)";
-          }
-        });
-        mouseRefElement.removeEventListener("mouseleave", () => {
-          if (cursor) {
-            cursor.style.width = "40px";
-            cursor.style.height = "40px";
-            cursor.innerHTML = "";
-            cursor.style.transform = "translate(0,0)";
-          }
-        });
-      }
-    }
-
-  } , [])
+  
 
   return (
     <div className="px-10 flex flex-col py-4 ">
@@ -88,7 +42,7 @@ const About = () => {
         Some showcase <span className="">Projects</span>
       </h1>
 
-      <div className="flex flex-wrap gap-4 justify-center  "  ref={mouseRef}>
+      <div className="flex flex-wrap gap-4 justify-center  "  >
         {workDetails.map((el, i) => (
           <Cards
             desc={el.desc}
