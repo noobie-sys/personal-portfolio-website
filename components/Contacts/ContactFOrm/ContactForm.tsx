@@ -16,40 +16,40 @@ import { SiteConfig, siteConfig } from "@/config/site";
 const ContactForm = () => {
   const mouseRef = useRef<HTMLAnchorElement>(null);
 
-  useEffect(() => {
-    const cursor = document.querySelector<HTMLDivElement>("#cursor");
-    const mouseRef_element = mouseRef.current;
+  // useEffect(() => {
+  //   const cursor = document.querySelector<HTMLDivElement>("#cursor");
+  //   const mouseRef_element = mouseRef.current;
 
-    const handleMouseOver = () => {
-      if (cursor) {
-        cursor.style.width = "100px";
-        cursor.style.height = "100px";
-        cursor.innerHTML = "<h1>Click Me</h1>";
-        cursor.style.transform = "translate(-50% ,-50%)";
-      }
-    };
+  //   const handleMouseOver = () => {
+  //     if (cursor) {
+  //       cursor.style.width = "100px";
+  //       cursor.style.height = "100px";
+  //       cursor.innerHTML = "<h1>Click Me</h1>";
+  //       cursor.style.transform = "translate(-50% ,-50%)";
+  //     }
+  //   };
 
-    const handleMouseLeave = () => {
-      if (cursor) {
-        cursor.style.width = "40px";
-        cursor.style.height = "40px";
-        cursor.innerHTML = "";
-        cursor.style.transform = "translate(0,0)";
-      }
-    };
+  //   const handleMouseLeave = () => {
+  //     if (cursor) {
+  //       cursor.style.width = "40px";
+  //       cursor.style.height = "40px";
+  //       cursor.innerHTML = "";
+  //       cursor.style.transform = "translate(0,0)";
+  //     }
+  //   };
 
-    if (mouseRef_element) {
-      mouseRef_element.addEventListener("mouseover", handleMouseOver);
-      mouseRef_element.addEventListener("mouseleave", handleMouseLeave);
-    }
+  //   if (mouseRef_element) {
+  //     mouseRef_element.addEventListener("mouseover", handleMouseOver);
+  //     mouseRef_element.addEventListener("mouseleave", handleMouseLeave);
+  //   }
 
-    // return () => {
-    //   if (mouseRef_element) {
-    //     mouseRef_element.removeEventListener("mouseover", handleMouseOver);
-    //     mouseRef_element.removeEventListener("mouseleave", handleMouseLeave);
-    //   }
-    // };
-  }, []);
+  //   return () => {
+  //     if (mouseRef_element) {
+  //       mouseRef_element.removeEventListener("mouseover", handleMouseOver);
+  //       mouseRef_element.removeEventListener("mouseleave", handleMouseLeave);
+  //     }
+  //   };
+  // }, []);
   return (
     <div className="contact-form">
       <motion.div

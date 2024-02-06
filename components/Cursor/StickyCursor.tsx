@@ -30,8 +30,6 @@ const StickyCursor = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mousePosition.x, mousePosition.y]);
 
   return (

@@ -17,49 +17,49 @@ type Props = {
 const Cards = ({ name, desc, image, link }: Props) => {
   const mouseRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const cursor = document.querySelector<HTMLElement>("#cursor");
-    const mouseRefElement = mouseRef.current;
+  // useEffect(() => {
+  //   const cursor = document.querySelector<HTMLElement>("#cursor");
+  //   const mouseRefElement = mouseRef.current;
 
-    if (mouseRefElement) {
-      mouseRefElement.addEventListener("mouseover", () => {
-        if (cursor) {
-          cursor.style.width = "100px";
-          cursor.style.height = "100px";
-          cursor.innerHTML = "<h1>Click Image</h1>";
-          cursor.style.transform = "translate(-50% ,-50%)";
-        }
-      });
-      mouseRefElement.addEventListener("mouseleave", () => {
-        if (cursor) {
-          cursor.style.width = "40px";
-          cursor.style.height = "40px";
-          cursor.innerHTML = "";
-          cursor.style.transform = "translate(0,0)";
-        }
-      });
-    }
-    // return () => {
-    //   if (mouseRefElement) {
-    //     mouseRefElement.removeEventListener("mouseover", () => {
-    //       if (cursor) {
-    //         cursor.style.width = "100px";
-    //         cursor.style.height = "100px";
-    //         cursor.innerHTML = "<h1>Click Image</h1>";
-    //         cursor.style.transform = "translate(-50% ,-50%)";
-    //       }
-    //     });
-    //     mouseRefElement.removeEventListener("mouseleave", () => {
-    //       if (cursor) {
-    //         cursor.style.width = "40px";
-    //         cursor.style.height = "40px";
-    //         cursor.innerHTML = "";
-    //         cursor.style.transform = "translate(0,0)";
-    //       }
-    //     });
-    //   }
-    // };
-  }, []);
+  //   if (mouseRefElement) {
+  //     mouseRefElement.addEventListener("mouseover", () => {
+  //       if (cursor) {
+  //         cursor.style.width = "100px";
+  //         cursor.style.height = "100px";
+  //         cursor.innerHTML = "<h1>Click Image</h1>";
+  //         cursor.style.transform = "translate(-50% ,-50%)";
+  //       }
+  //     });
+  //     mouseRefElement.addEventListener("mouseleave", () => {
+  //       if (cursor) {
+  //         cursor.style.width = "40px";
+  //         cursor.style.height = "40px";
+  //         cursor.innerHTML = "";
+  //         cursor.style.transform = "translate(0,0)";
+  //       }
+  //     });
+  //   }
+  //   // return () => {
+  //   //   if (mouseRefElement) {
+  //   //     mouseRefElement.removeEventListener("mouseover", () => {
+  //   //       if (cursor) {
+  //   //         cursor.style.width = "100px";
+  //   //         cursor.style.height = "100px";
+  //   //         cursor.innerHTML = "<h1>Click Image</h1>";
+  //   //         cursor.style.transform = "translate(-50% ,-50%)";
+  //   //       }
+  //   //     });
+  //   //     mouseRefElement.removeEventListener("mouseleave", () => {
+  //   //       if (cursor) {
+  //   //         cursor.style.width = "40px";
+  //   //         cursor.style.height = "40px";
+  //   //         cursor.innerHTML = "";
+  //   //         cursor.style.transform = "translate(0,0)";
+  //   //       }
+  //   //     });
+  //   //   }
+  //   // };
+  // }, []);
 
   return (
       <div className="card-div max-w-sm  " ref={mouseRef}>

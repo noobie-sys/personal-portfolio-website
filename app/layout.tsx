@@ -7,6 +7,8 @@ import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import SmoothScrolling from "./SmoothScrolling";
 import StickyCursor from "@/components/Cursor/StickyCursor";
+import { Lenis } from "@studio-freight/react-lenis";
+import { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -36,19 +38,15 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <SmoothScrolling>
-          <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+          <SmoothScrolling>
             <div className="relative flex flex-col">
               <Navbar />
               <StickyCursor />
-              <main className="p-10 sm:p-1 pt-5  ">
-                
-                {children}
-                
-                </main>
+              <main className="p-10 sm:p-1 pt-5  ">{children}</main>
             </div>
-          </Providers>
-        </SmoothScrolling>
+          </SmoothScrolling>
+        </Providers>
       </body>
     </html>
   );
