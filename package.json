@@ -1,9 +1,5 @@
 {
-"eslintConfig": {
-  "rules": {
-    "no-unsafe-recursion": "error"
-  }
-},
+
   "name": "next-app-template",
   "version": "0.0.1",
   "private": true,
