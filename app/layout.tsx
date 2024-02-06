@@ -5,10 +5,7 @@ import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
-import SmoothScrolling from "./SmoothScrolling";
 import StickyCursor from "@/components/Cursor/StickyCursor";
-import { Lenis } from "@studio-freight/react-lenis";
-import { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -29,15 +26,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
