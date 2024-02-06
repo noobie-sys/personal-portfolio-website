@@ -19,18 +19,18 @@ const StickyCursor = () => {
     y: useSpring(mousePosition.y, springOptions),
   };
 
+  const handleMouseMove = (e: MouseEvent) => {
+    const { pageX, pageY } = e;
+    mousePosition.x.set(pageX - cursorSize / 2);
+    mousePosition.y.set(pageY - cursorSize / 2);
+  };
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const { pageX, pageY } = e;
-      mousePosition.x.set(pageX - cursorSize / 2);
-      mousePosition.y.set(pageY - cursorSize / 2);
-    };
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [handleMouseMove]);
 
   return (
     <motion.div

@@ -1,4 +1,4 @@
-import React, { RefObject, forwardRef, useEffect, useRef } from "react";
+import React, {  useEffect, useRef } from "react";
 import "@/components/Skill/skill.css";
 import {
   TbBrandTypescript,
@@ -12,10 +12,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
-import { BiLogoTailwindCss } from "react-icons/bi";
 import { motion } from "framer-motion";
-import FramerMagneticEffect from "@/utils/framerMagneticEffect";
-
 const Skill = () => {
   const skills = [
     {
