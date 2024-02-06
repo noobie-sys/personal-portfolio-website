@@ -1,4 +1,4 @@
-import React, {  useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "@/components/Skill/skill.css";
 import {
   TbBrandTypescript,
@@ -13,6 +13,7 @@ import {
 } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import FramerMagneticEffect from "@/utils/framerMagneticEffect";
 const Skill = () => {
   const skills = [
     {
@@ -71,13 +72,12 @@ const Skill = () => {
       skill_element.addEventListener("mouseover", onMouseOver);
       skill_element.addEventListener("mouseleave", onMouseLeave);
 
-      // return () => {
-      //   skill_element.removeEventListener("mouseover", onMouseOver);
-      //   skill_element.removeEventListener("mouseleave", onMouseLeave);
-      // };
+      return () => {
+        skill_element.removeEventListener("mouseover", onMouseOver);
+        skill_element.removeEventListener("mouseleave", onMouseLeave);
+      };
     }
   }, []);
-
 
   return (
     <div className="skill-div">
@@ -89,6 +89,7 @@ const Skill = () => {
         {skills.map((el, i) => {
           return (
             <div key={i}>
+              <FramerMagneticEffect>
                 <motion.div
                   initial={{ opacity: 0, translateX: -100, translateY: 20 }}
                   whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}
@@ -106,6 +107,7 @@ const Skill = () => {
                     {el.skill}
                   </motion.h1>
                 </motion.div>
+              </FramerMagneticEffect>
             </div>
           );
         })}
