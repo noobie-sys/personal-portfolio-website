@@ -29,6 +29,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -39,13 +48,11 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <SmoothScrolling>
-            <div className="relative flex flex-col">
-              <Navbar />
-              <StickyCursor />
-              <main className="p-10 sm:p-1 pt-5  ">{children}</main>
-            </div>
-          </SmoothScrolling>
+          <div className="relative flex flex-col">
+            <Navbar />
+            <StickyCursor />
+            <main className="p-10 sm:p-1 pt-5  ">{children}</main>
+          </div>
         </Providers>
       </body>
     </html>
