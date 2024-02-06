@@ -1,11 +1,10 @@
-'use client'
+"use client";
 import Cards from "@/ui/card";
 import React, { useEffect, useRef } from "react";
 import EventHub from "@/public/event.webp";
 import redditCLone from "@/public/reddit-clone.webp";
 import portfoliSite from "@/public/portfolio.jpeg";
-
-
+import FramerMagneticEffect from "@/utils/framerMagneticEffect";
 
 const About = () => {
   const workDetails = [
@@ -29,25 +28,23 @@ const About = () => {
     },
   ];
 
-  
-
   return (
     <div className="px-10 flex flex-col py-4 ">
       <h1 className="work-heading">
         Some showcase <span className="">Projects</span>
       </h1>
-
-      <div className="flex flex-wrap gap-4 justify-center  "  >
-        {workDetails.map((el, i) => (
-          <Cards
-            desc={el.desc}
-            image={el.image}
-            link={el.links}
-            name={el.name}
-            key={i}
-          />
-        ))}
-      </div>
+        <div className="flex flex-wrap gap-4 justify-center  ">
+          {workDetails.map((el, i) => (
+      <FramerMagneticEffect key={i}>
+            <Cards
+              desc={el.desc}
+              image={el.image}
+              link={el.links}
+              name={el.name}
+            />
+      </FramerMagneticEffect>
+          ))}
+        </div>
     </div>
   );
 };
