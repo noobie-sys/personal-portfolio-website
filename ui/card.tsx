@@ -53,7 +53,7 @@ const Cards = ({ name, desc, image, link }: Props) => {
 
   return (
     <div className="card-div max-w-sm  " ref={mouseRef}>
-      <Link href={link} className="image-card">
+      <Link href={link} className="image-card" target="_blank">
         <Image className="rounded-t-lg object-cover" src={image} alt="" />
       </Link>
       <div className="card-detail">

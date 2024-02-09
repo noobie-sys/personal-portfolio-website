@@ -60,7 +60,7 @@ const Skill = () => {
       const onMouseOver = () => {
         cursor.style.width = "100px";
         cursor.style.height = "100px";
-        cursor.style.transform = "translate(-40% , -30%)";
+        cursor.style.transform = "translate(-100% , 100%)";
       };
 
       const onMouseLeave = () => {

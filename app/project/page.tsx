@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import EventHub from "@/public/event.webp";
 import redditCLone from "@/public/reddit-clone.webp";
 import portfoliSite from "@/public/portfolio.jpeg";
+import Ochi from "@/public/ochi.png";
 import FramerMagneticEffect from "@/utils/framerMagneticEffect";
 
 const About = () => {
@@ -26,6 +27,13 @@ const About = () => {
       image: portfoliSite,
       links: "https://aman-gupta.vercel.app",
     },
+    {
+      name: "Ochi Design",
+      desc: "Ochi Design with the help of locomotive scroll, next.js and pure SCSS and some tailwind CSS",
+      image: Ochi,
+      links: "https://ochi-design-practice.vercel.app",
+    },
+    
   ];
 
   return (

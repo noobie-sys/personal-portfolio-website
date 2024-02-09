@@ -94,24 +94,6 @@
   position: relative;
 }
 
-.lower_element::before {
-  content: "Sooon Later";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #afafaf;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--cliamte);
-  font-size: 2rem;
-  text-shadow: 5px 5px 10px black;
-  z-index: 100;
-  pointer-events: none;
-}
-
 .middle_div img {
   width: 100%;
   height: 100%;

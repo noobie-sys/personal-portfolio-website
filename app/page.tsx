@@ -5,11 +5,14 @@ import About from "@/components/About/About";
 import Work from "@/components/Work/Work";
 import Contact from "@/components/Contacts/Contact";
 import { useEffect } from "react";
-import Lenis from '@studio-freight/lenis';
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      lerp : 0.1,
+      duration : 0.5
+    });
 
     function raf(time : number) {
       lenis.raf(time);
@@ -17,6 +20,7 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
+
   }, []);
 
   return (
