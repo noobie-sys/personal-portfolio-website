@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import StickyCursor from "@/components/Cursor/StickyCursor";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: {
@@ -39,7 +40,9 @@ export default function RootLayout({
           <div className="relative flex flex-col">
             <Navbar />
             <StickyCursor />
-            <main className="p-10 sm:p-1 pt-5  ">{children}</main>
+            <main className="p-10 sm:p-1 pt-5  ">{children}
+            <SpeedInsights />
+            </main>
           </div>
         </Providers>
       </body>

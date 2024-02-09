@@ -7,6 +7,7 @@ import Contact from "@/components/Contacts/Contact";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
+
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -24,7 +25,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="mobile-responsive w-full h-full flex flex-col justify-center relative z-40">
+    <section className="mobile-responsive w-full h-full flex flex-col justify-center relative z-42">
       <Hero />
       <Skill />
       <About />
