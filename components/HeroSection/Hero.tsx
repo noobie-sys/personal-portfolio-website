@@ -4,14 +4,11 @@ import "./Hero.css";
 import Image from "next/image";
 import { BsMouse } from "react-icons/bs";
 import { motion } from "framer-motion";
-import face from "@/public/face5.jpg";
 import image2 from "@/public/aman/pic3.jpeg";
 
 type Props = {};
 
 const Hero = (props: Props) => {
-  const aman = "Aman".split("");
-  const gupta = "Gupta".split("");
   return (
     <div className="main-div w-full h-screen ">
       <div className="name dark:text-slate-300 ">
