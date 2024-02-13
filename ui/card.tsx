@@ -12,9 +12,10 @@ type Props = {
   desc: string;
   image: StaticImageData;
   link: string;
+  skill: Array<string>;
 };
 
-const Cards = ({ name, desc, image, link }: Props) => {
+const Cards = ({ name, desc, image, link, skill }: Props) => {
   const mouseRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const Cards = ({ name, desc, image, link }: Props) => {
         cursor.innerHTML = "<h1>Click Image</h1>";
         cursor.style.transform = "translate(-50% ,-50%)";
       }
-    }
+    };
 
     const mouseLeave = () => {
       if (cursor) {
@@ -37,7 +38,7 @@ const Cards = ({ name, desc, image, link }: Props) => {
         cursor.innerHTML = "";
         cursor.style.transform = "translate(0,0)";
       }
-    }
+    };
 
     if (mouseRefElement) {
       mouseRefElement.addEventListener("mouseover", mouseMove);
@@ -63,6 +64,18 @@ const Cards = ({ name, desc, image, link }: Props) => {
           </h5>
         </div>
         <p className="mb-14 font-normal  ">{desc}</p>
+        <div className="flex flex-wrap gap-1">
+          {skill.map((el, i) => {
+            return (
+              <div
+                className=" border-2 px-2 py-0.5 flex justify-center items-center backdrop-blur-3xl rounded-full  border-white "
+                key={i}
+              >
+                <span>{el}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

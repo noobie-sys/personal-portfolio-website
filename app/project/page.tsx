@@ -14,24 +14,28 @@ const About = () => {
       desc: "Event Hub is where you can host and edit events, it is made up with next.js, typescript , javascript , firebase, atom fot state management and many other library for styles",
       image: EventHub,
       links: "https://event-hub-3fv5.vercel.app",
+      skill : ["Next.js" , "Typescript" , "Javascript" , "Firebase" , "Atom"]
     },
     {
       name: "Reddit Clone",
       desc: "Reddit is huge platform for hangout, so i thought i have to make it so i did it. It was made up with next.js , atom for state management, tailwinds, typescript and javascript and many other style framerwork",
       image: redditCLone,
       links: "https://reddit-clone-app-eight.vercel.app",
+      skill : ["Next.js" , "Typescript" , "Javascript" , "Tailwinds" , "Atom"]
     },
     {
       name: "Previous Portfolio site",
       desc: "My first ever portfolio site where i post my two work and it made up with tailwind css and next.js",
       image: portfoliSite,
       links: "https://aman-gupta.vercel.app",
+      skill : ["Next.js" , "Typescript" , "Javascript" , "Tailwind CSS"]
     },
     {
       name: "Ochi Design",
       desc: "Ochi Design with the help of locomotive scroll, next.js and pure SCSS and some tailwind CSS",
       image: Ochi,
       links: "https://ochi-design-practice.vercel.app",
+      skill: ["Next.js" , "Typescript" , "Javascript" , "Tailwind CSS"]
     },
   ];
 
@@ -47,6 +51,7 @@ const About = () => {
             image={el.image}
             link={el.links}
             name={el.name}
+            skill={el.skill}
             key={i}
           />
         ))}

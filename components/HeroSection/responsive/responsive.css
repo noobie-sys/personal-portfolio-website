@@ -88,8 +88,12 @@
     .name {
         margin-left: 0;
     }
-    .steve-jobs > img {
-        width: 400px !important;
-        height: 400px !important;
+    .front-context--image .frontend-div {
+        display: none;
     }
+    .front-context--image h2
+    {
+        text-align: center;
+    }
+  
 }

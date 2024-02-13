@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
     <div className="main-div w-full h-screen ">
       <div className="name dark:text-slate-300 ">
         <div className="w-full -leading-1">
-          <motion.h1 initial={{translateX : -200}} animate={{translateX : 0}} transition={{duration : 0.6}} className="text-5xl ml-10 ">I&#39;m</motion.h1>
+          <motion.h1 initial={{translateX : -200}} animate={{translateX : 0}} transition={{duration : 0.6}} className="text-[4vw] ml-10 heading-i">I&#39;m</motion.h1>
         </div>
         <div className="front-context">
           <div className="front-context--image">

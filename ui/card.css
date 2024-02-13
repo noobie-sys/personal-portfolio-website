@@ -6,7 +6,13 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   overflow: hidden;
   font-family: var(--family);
+  transition: transform 0.4s ease-in-out;
   
+}
+
+.card-div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px  rgba(77, 77, 77, 0.603);
 }
 
 .image-card > img {
