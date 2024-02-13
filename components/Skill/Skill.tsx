@@ -14,6 +14,7 @@ import {
 import { RiReactjsFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import FramerMagneticEffect from "@/utils/framerMagneticEffect";
+import { onMouseLeave, onMouseOver } from "@/utils/cursorSize";
 const Skill = () => {
   const skills = [
     {
@@ -57,24 +58,20 @@ const Skill = () => {
 
     const skill_element = skillRef.current;
     if (skill_element && cursor) {
-      const onMouseOver = () => {
-        cursor.style.width = "100px";
-        cursor.style.height = "100px";
-        cursor.style.transform = "translate(-100% , 100%)";
-      };
-
-      const onMouseLeave = () => {
-        cursor.style.width = "40px";
-        cursor.style.height = "40px";
-        cursor.style.transform = "translate(0% , 0%)";
-      };
-
-      skill_element.addEventListener("mouseover", onMouseOver);
-      skill_element.addEventListener("mouseleave", onMouseLeave);
+      skill_element.addEventListener("mouseover", () =>
+        onMouseOver({ cursor , bool : false})
+      );
+      skill_element.addEventListener("mouseleave", () =>
+        onMouseLeave({ cursor })
+      );
 
       return () => {
-        skill_element.removeEventListener("mouseover", onMouseOver);
-        skill_element.removeEventListener("mouseleave", onMouseLeave);
+        skill_element.removeEventListener("mouseover", () =>
+          onMouseOver({ cursor , bool : false})
+        );
+        skill_element.removeEventListener("mouseleave", () =>
+          onMouseLeave({ cursor })
+        );
       };
     }
   }, []);

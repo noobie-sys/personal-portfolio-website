@@ -5,50 +5,79 @@
     flex-direction: column;
     padding: 40px 0;
     height: 100vh;
-}
-.name {
-    line-height: 8rem;
-    font-size: 10rem;
-    height: fit-content;
-    font-family: 'Climate Crisis', sans-serif;
-    color : rgb(25, 20, 20);
     position: relative;
     z-index: 2;
-    margin-left: 50px;
-    margin-top: 60px;
+    color: rgb(194, 194, 194);
+}
+
+.name {
+    font-family: 'Climate Crisis', sans-serif;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0.3rem 1rem;
     
 }
 
-.name .name-element > h2 {
-    color: rgb(197, 191, 191);
+.front-context h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+    text-align: center;
 }
 
-.steve-jobs {
-    position: absolute;
-    left: 30%;
-    top: -12%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.front-context--image {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
-    filter: grayscale(80%);
+    padding: 0 1rem;
 }
-.steve-jobs > img {
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
+.front-context--image .frontend-div {
+    width: 20vw;
+    overflow: hidden;
+    border-radius: 1.8rem;
+    margin-right: 7rem;
+
 }
+.front-context--image .frontend-div img {
+    object-fit: cover;
+    object-position: contain;
+    width: 100%;
+    height: 16vh;
+    transition: transform 0.3s ease-in-out;
+}
+.front-context--image .frontend-div img:hover {
+    transform: scale(1.1);
+}
+.front-context--image h2 {
+    font-size: 10vw;
+}
+
+
+.name .name-element  {
+    display: flex;
+    gap: 1rem;
+    font-size: 8vw;
+}
+
+
 
 .desc {
-    width: 40rem;
-    margin: 20px 10px;
+    width: 100%;
     font-family: 'Comfortaa', sans-serif;
     font-size: 1.2rem;
     position: relative;
     z-index: 3;
-    margin-left: 50px;
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desc h1 {
+    width: 60%;
+    text-align: center;
+    margin-top: 4vw;
 }
 .mouse {
     position: absolute;
@@ -60,6 +89,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    overflow: hidden;
     
 }
 .scroll {
@@ -68,12 +98,13 @@
 .mouse-icon {
     height: 70px;
     border: 1px solid white;
-    padding: 6px 2px;
     border-radius: 40px;
+    padding: 6px 2px;
+    
 }
 
 .icon-mouse {
-    animation: upsideDown 5s linear infinite;
+    animation: upsideDown 5s linear infinite ;
 }
 
 
@@ -81,11 +112,11 @@
     0% {
         transform: translateY(0);
     }
-    100%{
+    50%{
         transform: translateY(100%);
     }
-    0%{
-        transform: translateY(0);
+    80%{
+        transform: translateY(0%);
     }
 }
 

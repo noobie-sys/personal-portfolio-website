@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./contactForm.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -11,47 +11,57 @@ import {
 } from "react-icons/ri";
 import { variants } from "../Contact";
 import FramerMagneticEffect from "@/utils/framerMagneticEffect";
-import { SiteConfig, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
+import { onMouseLeave, onMouseOver } from "@/utils/cursorSize";
 
 const ContactForm = () => {
   const mouseRef = useRef<HTMLAnchorElement>(null);
+  const resumeRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    const cursor = document.querySelector<HTMLDivElement>("#cursor");
+    const cursor = document.querySelector<HTMLElement>("#cursor");
     const mouseRef_element = mouseRef.current;
+    const resumeRef_element = resumeRef.current;
 
-    const handleMouseOver = () => {
-      if (cursor) {
-        cursor.style.width = "100px";
-        cursor.style.height = "100px";
-        cursor.innerHTML = "<h1>Click Me</h1>";
-        cursor.style.transform = "translate(-50% ,-50%)";
-      }
-    };
-
-    const handleMouseLeave = () => {
-      if (cursor) {
-        cursor.style.width = "40px";
-        cursor.style.height = "40px";
-        cursor.innerHTML = "";
-        cursor.style.transform = "translate(0,0)";
-      }
-    };
-
-    if (mouseRef_element) {
-      mouseRef_element.addEventListener("mouseover", handleMouseOver);
-      mouseRef_element.addEventListener("mouseleave", handleMouseLeave);
+    if (mouseRef_element && cursor) {
+      mouseRef_element.addEventListener("mouseover", () =>
+        onMouseOver({ cursor, text: "Click Me" })
+      );
+      mouseRef_element.addEventListener("mouseleave", () =>
+        onMouseLeave({ cursor })
+      );
+    }
+    if (resumeRef_element && cursor) {
+      resumeRef_element.addEventListener("mouseover", () =>
+        onMouseOver({ cursor, text: "redirect" })
+      );
+      resumeRef_element.addEventListener("mouseleave", () =>
+        onMouseLeave({ cursor })
+      );
     }
 
     return () => {
-      if (mouseRef_element) {
-        mouseRef_element.removeEventListener("mouseover", handleMouseOver);
-        mouseRef_element.removeEventListener("mouseleave", handleMouseLeave);
+      if (mouseRef_element && cursor) {
+        mouseRef_element.removeEventListener("mouseover", () =>
+          onMouseOver({ cursor })
+        );
+        mouseRef_element.removeEventListener("mouseleave", () =>
+          onMouseLeave({ cursor })
+        );
+      }
+      if (resumeRef_element && cursor) {
+        resumeRef_element.removeEventListener("mouseover", () =>
+          onMouseOver({ cursor, text: "redirect" })
+        );
+        resumeRef_element.removeEventListener("mouseleave", () =>
+          onMouseLeave({ cursor })
+        );
       }
     };
+    
   }, []);
-  
-  
+
+
   return (
     <div className="contact-form">
       <motion.div
@@ -128,6 +138,7 @@ const ContactForm = () => {
             href={siteConfig.links.resume}
             target="_blank"
             className="text-[3rem] uppercase resume"
+            ref={resumeRef}
           >
             Resume
           </Link>

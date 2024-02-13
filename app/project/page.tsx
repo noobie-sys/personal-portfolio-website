@@ -33,7 +33,6 @@ const About = () => {
       image: Ochi,
       links: "https://ochi-design-practice.vercel.app",
     },
-    
   ];
 
   return (
@@ -41,18 +40,17 @@ const About = () => {
       <h1 className="work-heading">
         Some showcase <span className="">Projects</span>
       </h1>
-        <div className="flex flex-wrap gap-4 justify-center  ">
-          {workDetails.map((el, i) => (
-      <FramerMagneticEffect key={i}>
-            <Cards
-              desc={el.desc}
-              image={el.image}
-              link={el.links}
-              name={el.name}
-            />
-      </FramerMagneticEffect>
-          ))}
-        </div>
+      <div className="flex flex-wrap gap-4 justify-center  ">
+        {workDetails.map((el, i) => (
+          <Cards
+            desc={el.desc}
+            image={el.image}
+            link={el.links}
+            name={el.name}
+            key={i}
+          />
+        ))}
+      </div>
     </div>
   );
 };
